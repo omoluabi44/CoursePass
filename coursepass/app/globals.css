@@ -1,9 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap');
+:root{
+    --base-clr: #11121a;
+    --line-clr: #42434a;
+    --hover-clr: #222533;
+    --text-clr:#e6e6ef;
+    --accent-clr:#5e63ff;
+    --secondary-text-clr: #b0b3c1;
 
+ }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    font-family: Popins, sans-serif;
+    line-height: 1.5rem;
+ }
