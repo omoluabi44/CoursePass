@@ -43,7 +43,8 @@ const Courses = () => {
         <div className={s.a}>
       <svg  className={s.svg} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M400-400h160v-80H400v80Zm0-120h320v-80H400v80Zm0-120h320v-80H400v80Zm-80 400q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>
         <span>Courses</span>
-        <svg className={s.svg}  xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+        <svg   className={`${s.svg} ${activeDropdown === 'courses' ? s.rotate : ''}`} 
+         xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
         </div>
       </button>
       <ul className={`${s.submenu} ${activeDropdown === 'courses' ? s.show : ''}`}>
@@ -75,7 +76,8 @@ const Courses = () => {
       <div className={s.a}>
       <svg className={s.svg} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-72 170-240v-273L-19-618l499-273 500 273v366H874v-308l-84 47v273L480-72Zm0-394 280-152-280-151-279 151 279 152Zm0 273 204-110v-155L480-345.09 276-458v155l204 110Zm1-273Zm-1 113Zm0 0Z"/></svg>
         <span>Department</span>
-        <svg className={s.svg}  xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+        <svg className={`${s.svg} ${activeDropdown === 'department' ? s.rotate : ''}`}
+         xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
         </div>
       </button >
       <ul className={`${s.submenu} ${activeDropdown === 'department' ? s.show : ''}`}>

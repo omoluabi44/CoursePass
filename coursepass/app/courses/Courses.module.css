@@ -106,3 +106,8 @@ gap: 1em;
 
 grid-template-rows: 1fr;
 }
+
+.rotate {
+   transform: rotate(180deg);
+   transition: transform 0.3s ease; /* Smooth rotation */
+ }
