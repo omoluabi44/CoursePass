@@ -4,11 +4,12 @@
     min-height: 100dvh;
     background-color: var(--base-clr);
     color: var(--text-clr);
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
+    justify-content: center;
+  
 
  }
- .container main{
+ /* .container main{
     padding: min(30px, 7%);
 
  }
@@ -26,7 +27,7 @@
  
  }
  .maincontainer h2 & p{margin-top: 1em}
-
+ */
 
  #sidebar{
     box-sizing: border-box;
@@ -38,20 +39,15 @@
     position: sticky;
     top:0;
     align-self: start;
+    overflow-y: auto; /* Enable vertical scrollbar */
+    scrollbar-width: thin; /* For modern browsers */
+    scrollbar-color: var(--accent-clr) var(--hover-clr); /* Customize colors */
  
  }
  #sidebar ul{
     list-style: none;
  }
 
- #sidebar >ul >li:first-child{
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 16px;
-    .logo{
-        font-weight: 600;
-    }
- }
  #sidebar ul li.active a{
     color:var(--accent-clr);
     .svg{
@@ -100,7 +96,7 @@ gap: 1em;
     > .div{
         overflow: hidden;
     }
-
+ 
 }
 #sidebar .submenu.show{
 
@@ -111,3 +107,20 @@ grid-template-rows: 1fr;
    transform: rotate(180deg);
    transition: transform 0.3s ease; /* Smooth rotation */
  }
+ #sidebar .submenu a{
+   padding-left: 2em;
+ }
+#togglebtn{
+   margin-left: auto;
+   padding: 1em;
+   border: none;
+   border-radius: .5em;
+   background: none;
+   cursor: pointer;
+   .svg{
+      transition: rotate 150ms ease;
+   }
+}
+#togglebtn:hover{
+   background-color: var(--hover-clr);
+}

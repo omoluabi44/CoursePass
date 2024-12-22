@@ -1,6 +1,70 @@
-.itemslist{
-    width: 100pxs;
-    height: 100pxs;
-    background-color: black;
-    color: white;
+.container{
+    background: linear-gradient(45deg, blueviolet, lightgreen);
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 100px;
+}
+.container .heading{    text-align: center;
+    padding-bottom: 15px;
+    color: black;
+}
+.box_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 5px;
+    
+
+}
+.box_container .cardList{
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+
+.box_container .cardList h3{
+  color: black;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+
+
+.header_container{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.header_container .filter_container{
+  /* justify-content: space-between; */
+}
+
+.header_container .course_heading{
+justify-content: left;
+}
+.search_container{
+  display: flex;
+}
+.search{
+  border: solid black;
+  border-radius: 20px;
+  text-align: center;
+  padding: 5px;
+}
+.search_btn{
+ 
+}
+.search_btn .icon{
+ font-size: 30px;
+}
+
+.filter_container{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
 }
