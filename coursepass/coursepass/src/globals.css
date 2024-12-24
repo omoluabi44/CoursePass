@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap');
+:root{
+    --base-clr: #fff;
+    --line-clr: #42434a;
+    --hover-clr: #b0b3c1;
+    --text-clr:#11121a;
+    --accent-clr:#142d71;
+    --secondary-text-clr: #b0b3c1;
+
+ }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Popins, sans-serif;
+    line-height: 1.5rem;
+ }
+ /* Layout container */
+/* Layout container */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Main content container */
+  .main {
+    display: flex;
+    flex-grow: 1; /* Ensure the main container takes all available space */
+    overflow: hidden; /* Prevent overflow issues */
+  }
+  
+  /* Sidebar styles */
+  #sidebar {
+    width: 250px; /* Fixed width for the sidebar */
+    background-color: var(--base-clr);
+    border-right: 1px solid var(--line-clr);
+    position: fixed; /* Fixed sidebar */
+    top: 0;
+    left: 0;
+    height: 100vh; /* Ensure the sidebar takes full height */
+    overflow-y: auto; /* Enable vertical scrolling for sidebar */
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+  }
+  
+  /* Content area styles */
+  .content {
+    flex-grow: 1; /* Main content takes up remaining space */
+    padding: 1rem; /* Add padding for content */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport */
+    max-width: calc(100vw - 250px); /* Ensure content doesn't overflow the sidebar width */
+    box-sizing: border-box; /* Include padding in width calculations */
+    height: 100vh; /* Full height of the viewport */
+    overflow-x: hidden; /* Hide horizontal overflow */
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--base-clr);
+    border-bottom: 1px solid var(--line-clr);
+    padding: 1rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    #sidebar {
+      width: 200px; /* Adjust the sidebar width on smaller screens */
+    }
+  
+    .content {
+      padding: 0.5rem; /* Reduce padding for smaller screens */
+    }
+  }
+  

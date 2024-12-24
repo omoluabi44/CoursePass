@@ -1,0 +1,160 @@
+/* Navbar styles */
+.navbar {
+    background-color: #1e3a8a; /* Deep indigo blue for the navbar background */
+    color: #ffffff; /* White text for contrast */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative; /* Allows better positioning for child elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for elegance */
+    border-bottom: 3px solid #2563eb; /* Bright blue border for accent */
+    font-family: 'Noto Sans JP', sans-serif; /* Clean Japanese sans-serif font */
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 20px; /* Slightly smaller logo */
+    font-weight: bold;
+    color: #fff; /* Light blue for logo text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  /* Search Container */
+  .searchContainer {
+    display: flex;
+    align-items: center;
+    position: absolute; /* Position in the middle of the navbar */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .searchInput {
+    padding: 8px;
+    font-size: 14px; /* Smaller font for input */
+    border: 1px solid #3b82f6; /* Bright blue border for input */
+    border-radius: 4px 0 0 4px; /* Rounded corners on the left */
+    outline: none;
+    width: 250px; /* Slightly smaller width */
+    box-sizing: border-box;
+    background-color: #ffffff; /* White background for clean contrast */
+    color: #1e3a8a; /* Deep indigo text for readability */
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  
+  .searchInput::placeholder {
+    color: #6b7280; /* Subtle gray placeholder color */
+  }
+  
+  .searchButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background-color: #2563eb; /* Bright blue button */
+    color: white;
+    border: 1px solid #2563eb;
+    border-left: none; /* Remove border between input and button */
+    border-radius: 0 4px 4px 0; /* Rounded corners on the right */
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .searchButton:hover {
+    background-color: #1d4ed8; /* Darker blue on hover */
+  }
+  
+  .searchIcon {
+    font-size: 16px; /* Smaller icon size */
+  }
+  
+  /* Navigation Links */
+  .nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .nav li {
+    margin-left: 15px; /* Reduced spacing between links */
+  }
+  
+  .nav a {
+    color: #ffffff; /* White text for links */
+    font-size: 14px; /* Smaller font size */
+    font-weight: normal; /* Lighter font weight */
+    text-decoration: none;
+    padding: 5px 8px; /* Compact padding */
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav a:hover {
+    background-color: #3b82f6; /* Bright blue background on hover */
+    color: #f3f4f6; /* Very light gray text on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .searchInput {
+      width: 200px; /* Shrink search bar on medium screens */
+    }
+  
+    .logo {
+      font-size: 18px; /* Adjust logo size */
+    }
+  
+    .nav a {
+      font-size: 12px; /* Smaller text for links */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-wrap: wrap; /* Allow wrapping of elements */
+      justify-content: center;
+      padding: 10px;
+      height: auto; /* Allow height to adjust dynamically */
+    }
+  
+    .searchContainer {
+      position: static; /* Remove absolute positioning */
+      transform: none;
+      margin: 10px 0; /* Add spacing */
+    }
+  
+    .nav {
+      flex-direction: column; /* Stack navigation links vertically */
+      margin-top: 10px;
+    }
+  
+    .nav li {
+      margin: 10px 0; /* Add vertical spacing */
+    }
+  
+    .searchInput {
+      width: 100%; /* Full width for input */
+    }
+  
+    .searchButton {
+      width: 100%; /* Full width for button */
+      margin-top: 5px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 16px; /* Smaller logo for mobile */
+    }
+  
+    .searchInput {
+      font-size: 12px; /* Smaller input font size */
+    }
+  
+    .nav a {
+      font-size: 10px; /* Compact text size */
+    }
+  }
+  
