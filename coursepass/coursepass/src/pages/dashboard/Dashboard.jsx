@@ -3,30 +3,22 @@ import { useDispatch, useSelector } from "react-redux";
 import Styles from "./page.module.css";
 import { setCourses } from "../../redux/actions/courses";
 import { setCollege,setDepartment,setSemester,setlevel } from "../../redux/actions/filterActions";
+import { useNavigate } from "react-router-dom";
+import fetchCourses from "../../redux/actions/courses";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const courses = useSelector((state) => state.allCourses.courses);
   const filters = useSelector((state) => state.filters);
 
+
+  const handleStartCourse = (courseId) => {
+    navigate(`/courses/${courseId}`);
+    window.location.reload();
+  }
+
   useEffect(() => {
-    async function fetchCourses() {
-      try {
-        const response = await fetch("http://localhost:3000/api.json");
-        const data = await response.json();
-
-        console.log("Courses data:", data);
-        
-        if (data ) {
-          dispatch(setCourses(data));
-          console.log("succesfull");
-          
-        }
-      } catch (error) {
-        console.error("Error fetching courses:", error);
-      }
-    }
-
     fetchCourses();
   }, [dispatch]);
 
@@ -55,9 +47,12 @@ const filteredCourses = courses.filter(course => {
 if (!filteredCourses || filteredCourses.length === 0) {
   return <p>Loading courses...</p>;
 }
+console.log(courses);
+
   return (
     <>
      <div className={Styles.header_container}>
+
                      <div className={Styles.course_heading}>All Courses</div>
                      <div className={Styles.search_container}>
                      <input className={Styles.search} type="text" placeholder="Search Courses"/>
@@ -124,7 +119,7 @@ if (!filteredCourses || filteredCourses.length === 0) {
                              
                      </div>
      
-             </div>
+     </div>
 
       <div className={Styles.container}>
         <div className={Styles.box_container}>
@@ -134,7 +129,15 @@ if (!filteredCourses || filteredCourses.length === 0) {
               <div className={Styles.cardList} key={course.id}>
                 <h3 className={Styles.coursename}>{course.name}</h3>
                 <p className={Styles.level}>{course.level}</p>
-                <a href="#" className={Styles.btn}>Start this Course</a>
+             
+                <button
+                  className={Styles.btn}
+                  onClick={() => handleStartCourse(course.courseID)}
+                >
+                  Start this Course
+                </button>
+                
+                
               </div>
             ))
           )}

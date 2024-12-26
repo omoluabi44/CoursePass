@@ -1,11 +1,11 @@
 import { ActionTypes } from "../actionCreators/action-types"
-export const setProducts =(courses)=>{
+export const setCourses =(courses)=>{
     return {
         type: ActionTypes.SET_COURSES,
         payload: courses,
     }
 }
-export const selectedProduct =(course)=>{
+export const selectedCourse =(course)=>{
     return {
         type: ActionTypes.SELECTED_COURSE,
         payload: course,

@@ -1,6 +1,8 @@
 import  ActionTypes  from "../actionCreators/action-types";
+
 const initialState = {
-    courses: [ ]
+    courses: [ ],
+    selectedCourse: null,
 }
 export const  courseReducers = (state = initialState, action) => {
     switch(action.type){
@@ -9,11 +11,11 @@ export const  courseReducers = (state = initialState, action) => {
                 ...state,
                 courses: action.payload,
             }
-        // case ActionTypes.SELECTED_COURSE:
-        //     return {
-        //         ...state,
-        //         course: action.payload
-        //     }
+        case "SET_SELECTED_COURSE":
+            return {
+                ...state,
+                selectedCourse: action.payload
+            }
         default:
             return state;
     }

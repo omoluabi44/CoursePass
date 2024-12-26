@@ -2,6 +2,7 @@
     {
       "id": 1,
       "name": "Math 101",
+     "courseID": "MAT101",
       "semester": "First Semester",
       "department": "Mechanical Engineering",
       "college": "C E T",
@@ -10,6 +11,7 @@
     {
       "id": 2,
       "name": "Physics 101",
+      "courseID": "PHY101",
       "semester": "First Semester",
       "department": "Mechatronics Engineering",
       "college": "College of Engineering",
@@ -18,6 +20,7 @@
     {
       "id": 3,
       "name": "CHM 103",
+      "courseID": "CHM103",
       "semester": "Second Semester",
       "department": "Mechanical Engineering",
       "college": "College of Applied Social Science",
@@ -26,6 +29,7 @@
     {
       "id": 4,
       "name": "CHM 107",
+      "courseID": "CHM107",
       "semester": "First Semester",
       "department": "Banking and Finance",
       "college": "College of Applied Social Science",
@@ -34,6 +38,7 @@
     {
       "id": 5,
       "name": "GST 103",
+      "courseID": "GST103",
       "semester": "Second Semester",
       "department": "Mechatronics Engineering",
       "college": "College of Engineering",
@@ -42,6 +47,7 @@
     {
       "id": 6,
       "name": "Math 201",
+      "courseID": "MAT201",
       "semester": "First Semester",
       "department": "Mechanical Engineering",
       "college": "College of Engineering",
@@ -50,6 +56,7 @@
     {
       "id": 7,
       "name": "Physics 201",
+      "courseID": "PHY201",
       "semester": "Second Semester",
       "department": "Mechatronics Engineering",
       "college": "College of Engineering",
@@ -58,6 +65,7 @@
     {
       "id": 8,
       "name": "CHM 203",
+      "courseID": "CHM203",
       "semester": "First Semester",
       "department": "Mechanical Engineering",
       "college": "College of Applied Social Science",
@@ -66,6 +74,7 @@
     {
       "id": 9,
       "name": "CHM 207",
+      "courseID": "CHM207",
       "semester": "Second Semester",
       "department": "Banking and Finance",
       "college": "College of Applied Social Science",
@@ -74,6 +83,7 @@
     {
       "id": 10,
       "name": "GST 203",
+      "courseID": "GST203",
       "semester": "First Semester",
       "department": "Mechatronics Engineering",
       "college": "College of Engineering",
@@ -82,6 +92,7 @@
     {
       "id": 11,
       "name": "Math 301",
+      "courseID": "MAT301",
       "semester": "First Semester",
       "department": "Mechanical Engineering",
       "college": "College of Engineering",
@@ -90,6 +101,7 @@
     {
       "id": 12,
       "name": "Physics 301",
+      "courseID": "PHY301",
       "semester": "Second Semester",
       "department": "Mechatronics Engineering",
       "college": "College of Engineering",
@@ -98,6 +110,7 @@
     {
       "id": 13,
       "name": "CHM 303",
+      "courseID": "CHM303",
       "semester": "First Semester",
       "department": "Mechanical Engineering",
       "college": "College of Applied Social Science",
@@ -106,6 +119,7 @@
     {
       "id": 14,
       "name": "CHM 307",
+      "courseID": "CHM307",
       "semester": "Second Semester",
       "department": "Banking and Finance",
       "college": "College of Applied Social Science",
@@ -114,6 +128,7 @@
     {
       "id": 15,
       "name": "GST 303",
+      "courseID": "GST303",
       "semester": "First Semester",
       "department": "Mechatronics Engineering",
       "college": "College of Engineering",

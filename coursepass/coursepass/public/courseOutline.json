@@ -1,0 +1,475 @@
+[
+{ "courseID": "PHY103",
+   "courseName": "Physics 103",
+   "courseOutline": [
+      {
+         "week": 1,
+         "topic": "Introduction to Physics"
+      },
+      {
+         "week": 2,
+         "topic": "Measurement"
+      },
+      {
+         "week": 3,
+         "topic": "Motion"
+      },
+      {
+         "week": 4,
+         "topic": "Force"
+      },
+      {
+         "week": 5,
+         "topic": "Work, Energy and Power"
+         
+      },
+      {
+         "week": 6,
+         "topic": "Momentum"
+        
+      },
+      {
+         "week": 7,
+         "topic": "Rotational Motion"
+      },
+      {
+         "week": 8,
+         "topic": "Gravitation"
+      },
+      {
+         "week": 9,
+         "topic": "Simple Harmonic Motion"
+      },
+      {
+         "week": 10,
+         "topic": "Fluids"
+      }
+   ]
+},
+{ "courseID": "PHY101",
+"courseName": "Physics 101",
+"courseOutline": [
+   {
+      "week": 1,
+      "topic": "Introduction to Physics"
+   },
+   {
+      "week": 2,
+      "topic": "Measurement"
+   },
+   {
+      "week": 3,
+      "topic": "Motion"
+   },
+   {
+      "week": 4,
+      "topic": "Force"
+   },
+   {
+      "week": 5,
+      "topic": "Work, Energy and Power"
+      
+   },
+   {
+      "week": 6,
+      "topic": "Momentum"
+     
+   },
+   {
+      "week": 7,
+      "topic": "Rotational Motion"
+   },
+   {
+      "week": 8,
+      "topic": "Gravitation"
+   },
+   {
+      "week": 9,
+      "topic": "Simple Harmonic Motion"
+   },
+   {
+      "week": 10,
+      "topic": "Fluids"
+   }
+]
+},
+{ "courseID": "CHM203",
+"courseName": "Chemistry 203",
+"courseOutline": [
+   {
+      "week": 1,
+      "topic": "Introduction to Physics"
+   },
+   {
+      "week": 2,
+      "topic": "Measurement"
+   },
+   {
+      "week": 3,
+      "topic": "Motion"
+   },
+   {
+      "week": 4,
+      "topic": "Force"
+   },
+   {
+      "week": 5,
+      "topic": "Work, Energy and Power"
+      
+   },
+   {
+      "week": 6,
+      "topic": "Momentum"
+     
+   },
+   {
+      "week": 7,
+      "topic": "Rotational Motion"
+   },
+   {
+      "week": 8,
+      "topic": "Gravitation"
+   },
+   {
+      "week": 9,
+      "topic": "Simple Harmonic Motion"
+   },
+   {
+      "week": 10,
+      "topic": "Fluids"
+   }
+]
+},
+{ "courseID": "CHM207",
+"courseName": "Chemistry 207",
+"courseOutline": [
+   {
+      "week": 1,
+      "topic": "Introduction to Physics"
+   },
+   {
+      "week": 2,
+      "topic": "Measurement"
+   },
+   {
+      "week": 3,
+      "topic": "Motion"
+   },
+   {
+      "week": 4,
+      "topic": "Force"
+   },
+   {
+      "week": 5,
+      "topic": "Work, Energy and Power"
+      
+   },
+   {
+      "week": 6,
+      "topic": "Momentum"
+     
+   },
+   {
+      "week": 7,
+      "topic": "Rotational Motion"
+   },
+   {
+      "week": 8,
+      "topic": "Gravitation"
+   },
+   {
+      "week": 9,
+      "topic": "Simple Harmonic Motion"
+   },
+   {
+      "week": 10,
+      "topic": "Fluids"
+   }
+]
+}
+,
+{ "courseID": "GST203",
+"courseName": "GST 203",
+"courseOutline": [
+   {
+      "week": 1,
+      "topic": "Introduction to Physics"
+   },
+   {
+      "week": 2,
+      "topic": "Measurement"
+   },
+   {
+      "week": 3,
+      "topic": "Motion"
+   },
+   {
+      "week": 4,
+      "topic": "Force"
+   },
+   {
+      "week": 5,
+      "topic": "Work, Energy and Power"
+      
+   },
+   {
+      "week": 6,
+      "topic": "Momentum"
+     
+   },
+   {
+      "week": 7,
+      "topic": "Rotational Motion"
+   },
+   {
+      "week": 8,
+      "topic": "Gravitation"
+   },
+   {
+      "week": 9,
+      "topic": "Simple Harmonic Motion"
+   },
+   {
+      "week": 10,
+      "topic": "Fluids"
+   }
+]
+},
+{ "courseID": "MAT101",
+"courseName": "MAT 301",
+"courseOutline": [
+   {
+      "week": 1,
+      "topic": "Introduction to Physics"
+   },
+   {
+      "week": 2,
+      "topic": "Measurement"
+   },
+   {
+      "week": 3,
+      "topic": "Motion"
+   },
+   {
+      "week": 4,
+      "topic": "Force"
+   },
+   {
+      "week": 5,
+      "topic": "Work, Energy and Power"
+      
+   },
+   {
+      "week": 6,
+      "topic": "Momentum"
+     
+   },
+   {
+      "week": 7,
+      "topic": "Rotational Motion"
+   },
+   {
+      "week": 8,
+      "topic": "Gravitation"
+   },
+   {
+      "week": 9,
+      "topic": "Simple Harmonic Motion"
+   },
+   {
+      "week": 10,
+      "topic": "Fluids"
+   }
+]
+},
+{ "courseID": "PHY301",
+"courseName": "Physics 301",
+"courseOutline": [
+   {
+      "week": 1,
+      "topic": "Introduction to Physics"
+   },
+   {
+      "week": 2,
+      "topic": "Measurement"
+   },
+   {
+      "week": 3,
+      "topic": "Motion"
+   },
+   {
+      "week": 4,
+      "topic": "Force"
+   },
+   {
+      "week": 5,
+      "topic": "Work, Energy and Power"
+      
+   },
+   {
+      "week": 6,
+      "topic": "Momentum"
+     
+   },
+   {
+      "week": 7,
+      "topic": "Rotational Motion"
+   },
+   {
+      "week": 8,
+      "topic": "Gravitation"
+   },
+   {
+      "week": 9,
+      "topic": "Simple Harmonic Motion"
+   },
+   {
+      "week": 10,
+      "topic": "Fluids"
+   }
+]
+},
+{ "courseID": "CHM303",
+"courseName": "CHM 303",
+"courseOutline": [
+   {
+      "week": 1,
+      "topic": "Introduction to Physics"
+   },
+   {
+      "week": 2,
+      "topic": "Measurement"
+   },
+   {
+      "week": 3,
+      "topic": "Motion"
+   },
+   {
+      "week": 4,
+      "topic": "Force"
+   },
+   {
+      "week": 5,
+      "topic": "Work, Energy and Power"
+      
+   },
+   {
+      "week": 6,
+      "topic": "Momentum"
+     
+   },
+   {
+      "week": 7,
+      "topic": "Rotational Motion"
+   },
+   {
+      "week": 8,
+      "topic": "Gravitation"
+   },
+   {
+      "week": 9,
+      "topic": "Simple Harmonic Motion"
+   },
+   {
+      "week": 10,
+      "topic": "Fluids"
+   }
+]
+},
+{ "courseID": "CHM307",
+"courseName": "CHM 307",
+"courseOutline": [
+   {
+      "week": 1,
+      "topic": "Introduction to Physics"
+   },
+   {
+      "week": 2,
+      "topic": "Measurement"
+   },
+   {
+      "week": 3,
+      "topic": "Motion"
+   },
+   {
+      "week": 4,
+      "topic": "Force"
+   },
+   {
+      "week": 5,
+      "topic": "Work, Energy and Power"
+      
+   },
+   {
+      "week": 6,
+      "topic": "Momentum"
+     
+   },
+   {
+      "week": 7,
+      "topic": "Rotational Motion"
+   },
+   {
+      "week": 8,
+      "topic": "Gravitation"
+   },
+   {
+      "week": 9,
+      "topic": "Simple Harmonic Motion"
+   },
+   {
+      "week": 10,
+      "topic": "Fluids"
+   }
+]
+},
+{ "courseID": "GST303",
+"courseName": "GST 303",
+"courseOutline": [
+   {
+      "week": 1,
+      "topic": "Introduction to Physics"
+   },
+   {
+      "week": 2,
+      "topic": "Measurement"
+   },
+   {
+      "week": 3,
+      "topic": "Motion"
+   },
+   {
+      "week": 4,
+      "topic": "Force"
+   },
+   {
+      "week": 5,
+      "topic": "Work, Energy and Power"
+      
+   },
+   {
+      "week": 6,
+      "topic": "Momentum"
+     
+   },
+   {
+      "week": 7,
+      "topic": "Rotational Motion"
+   },
+   {
+      "week": 8,
+      "topic": "Gravitation"
+   },
+   {
+      "week": 9,
+      "topic": "Simple Harmonic Motion"
+   },
+   {
+      "week": 10,
+      "topic": "Fluids"
+   }
+]
+}
+
+
+]
