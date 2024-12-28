@@ -1,475 +1,299 @@
 [
-{ "courseID": "PHY103",
-   "courseName": "Physics 103",
-   "courseOutline": [
-      {
+   {
+     "courseID": "PHY103",
+     "courseName": "Physics 103",
+     "courseOutline": [
+       {
          "week": 1,
-         "topic": "Introduction to Physics"
-      },
-      {
+         "topic": "Introduction to Physics",
+         "content": "This week introduces the fundamental concepts of physics, including its scope, importance, and real-world applications."
+       },
+       {
          "week": 2,
-         "topic": "Measurement"
-      },
-      {
+         "topic": "Measurement",
+         "content": "Learn about the SI units of measurement, precision, accuracy, and tools for measuring physical quantities."
+       },
+       {
          "week": 3,
-         "topic": "Motion"
-      },
-      {
+         "topic": "Motion",
+         "content": "Understand the laws of motion, kinematics, and the relationship between velocity, acceleration, and displacement."
+       },
+       {
          "week": 4,
-         "topic": "Force"
-      },
-      {
+         "topic": "Force",
+         "content": "Explore the concept of force, Newton's laws, and their applications in everyday situations."
+       },
+       {
          "week": 5,
-         "topic": "Work, Energy and Power"
-         
-      },
-      {
+         "topic": "Work, Energy and Power",
+         "content": "Study the definitions of work, energy, and power, including kinetic and potential energy calculations."
+       },
+       {
          "week": 6,
-         "topic": "Momentum"
-        
-      },
-      {
+         "topic": "Momentum",
+         "content": "Learn about momentum, impulse, and their conservation in closed systems."
+       },
+       {
          "week": 7,
-         "topic": "Rotational Motion"
-      },
-      {
+         "topic": "Rotational Motion",
+         "content": "Understand rotational dynamics, angular velocity, and moments of inertia."
+       },
+       {
          "week": 8,
-         "topic": "Gravitation"
-      },
-      {
+         "topic": "Gravitation",
+         "content": "Study the law of universal gravitation and its applications in planetary motion."
+       },
+       {
          "week": 9,
-         "topic": "Simple Harmonic Motion"
-      },
-      {
+         "topic": "Simple Harmonic Motion",
+         "content": "Learn about oscillatory motion, restoring forces, and energy in simple harmonic motion."
+       },
+       {
          "week": 10,
-         "topic": "Fluids"
-      }
-   ]
-},
-{ "courseID": "PHY101",
-"courseName": "Physics 101",
-"courseOutline": [
-   {
-      "week": 1,
-      "topic": "Introduction to Physics"
-   },
-   {
-      "week": 2,
-      "topic": "Measurement"
-   },
-   {
-      "week": 3,
-      "topic": "Motion"
-   },
-   {
-      "week": 4,
-      "topic": "Force"
-   },
-   {
-      "week": 5,
-      "topic": "Work, Energy and Power"
-      
-   },
-   {
-      "week": 6,
-      "topic": "Momentum"
-     
-   },
-   {
-      "week": 7,
-      "topic": "Rotational Motion"
-   },
-   {
-      "week": 8,
-      "topic": "Gravitation"
-   },
-   {
-      "week": 9,
-      "topic": "Simple Harmonic Motion"
-   },
-   {
-      "week": 10,
-      "topic": "Fluids"
-   }
-]
-},
-{ "courseID": "CHM203",
-"courseName": "Chemistry 203",
-"courseOutline": [
-   {
-      "week": 1,
-      "topic": "Introduction to Physics"
-   },
-   {
-      "week": 2,
-      "topic": "Measurement"
-   },
-   {
-      "week": 3,
-      "topic": "Motion"
-   },
-   {
-      "week": 4,
-      "topic": "Force"
-   },
-   {
-      "week": 5,
-      "topic": "Work, Energy and Power"
-      
-   },
-   {
-      "week": 6,
-      "topic": "Momentum"
-     
-   },
-   {
-      "week": 7,
-      "topic": "Rotational Motion"
-   },
-   {
-      "week": 8,
-      "topic": "Gravitation"
-   },
-   {
-      "week": 9,
-      "topic": "Simple Harmonic Motion"
-   },
-   {
-      "week": 10,
-      "topic": "Fluids"
-   }
-]
-},
-{ "courseID": "CHM207",
-"courseName": "Chemistry 207",
-"courseOutline": [
-   {
-      "week": 1,
-      "topic": "Introduction to Physics"
-   },
-   {
-      "week": 2,
-      "topic": "Measurement"
-   },
-   {
-      "week": 3,
-      "topic": "Motion"
-   },
-   {
-      "week": 4,
-      "topic": "Force"
-   },
-   {
-      "week": 5,
-      "topic": "Work, Energy and Power"
-      
-   },
-   {
-      "week": 6,
-      "topic": "Momentum"
-     
-   },
-   {
-      "week": 7,
-      "topic": "Rotational Motion"
-   },
-   {
-      "week": 8,
-      "topic": "Gravitation"
-   },
-   {
-      "week": 9,
-      "topic": "Simple Harmonic Motion"
-   },
-   {
-      "week": 10,
-      "topic": "Fluids"
-   }
-]
-}
-,
-{ "courseID": "GST203",
-"courseName": "GST 203",
-"courseOutline": [
-   {
-      "week": 1,
-      "topic": "Introduction to Physics"
-   },
-   {
-      "week": 2,
-      "topic": "Measurement"
-   },
-   {
-      "week": 3,
-      "topic": "Motion"
-   },
-   {
-      "week": 4,
-      "topic": "Force"
-   },
-   {
-      "week": 5,
-      "topic": "Work, Energy and Power"
-      
-   },
-   {
-      "week": 6,
-      "topic": "Momentum"
-     
-   },
-   {
-      "week": 7,
-      "topic": "Rotational Motion"
-   },
-   {
-      "week": 8,
-      "topic": "Gravitation"
-   },
-   {
-      "week": 9,
-      "topic": "Simple Harmonic Motion"
-   },
-   {
-      "week": 10,
-      "topic": "Fluids"
-   }
-]
-},
-{ "courseID": "MAT101",
-"courseName": "MAT 301",
-"courseOutline": [
-   {
-      "week": 1,
-      "topic": "Introduction to Physics"
-   },
-   {
-      "week": 2,
-      "topic": "Measurement"
-   },
-   {
-      "week": 3,
-      "topic": "Motion"
-   },
-   {
-      "week": 4,
-      "topic": "Force"
-   },
-   {
-      "week": 5,
-      "topic": "Work, Energy and Power"
-      
-   },
-   {
-      "week": 6,
-      "topic": "Momentum"
-     
-   },
-   {
-      "week": 7,
-      "topic": "Rotational Motion"
-   },
-   {
-      "week": 8,
-      "topic": "Gravitation"
-   },
-   {
-      "week": 9,
-      "topic": "Simple Harmonic Motion"
-   },
-   {
-      "week": 10,
-      "topic": "Fluids"
-   }
-]
-},
-{ "courseID": "PHY301",
-"courseName": "Physics 301",
-"courseOutline": [
-   {
-      "week": 1,
-      "topic": "Introduction to Physics"
-   },
-   {
-      "week": 2,
-      "topic": "Measurement"
-   },
-   {
-      "week": 3,
-      "topic": "Motion"
-   },
-   {
-      "week": 4,
-      "topic": "Force"
-   },
-   {
-      "week": 5,
-      "topic": "Work, Energy and Power"
-      
-   },
-   {
-      "week": 6,
-      "topic": "Momentum"
-     
-   },
-   {
-      "week": 7,
-      "topic": "Rotational Motion"
-   },
-   {
-      "week": 8,
-      "topic": "Gravitation"
-   },
-   {
-      "week": 9,
-      "topic": "Simple Harmonic Motion"
-   },
-   {
-      "week": 10,
-      "topic": "Fluids"
-   }
-]
-},
-{ "courseID": "CHM303",
-"courseName": "CHM 303",
-"courseOutline": [
-   {
-      "week": 1,
-      "topic": "Introduction to Physics"
-   },
-   {
-      "week": 2,
-      "topic": "Measurement"
-   },
-   {
-      "week": 3,
-      "topic": "Motion"
-   },
-   {
-      "week": 4,
-      "topic": "Force"
-   },
-   {
-      "week": 5,
-      "topic": "Work, Energy and Power"
-      
-   },
-   {
-      "week": 6,
-      "topic": "Momentum"
-     
-   },
-   {
-      "week": 7,
-      "topic": "Rotational Motion"
-   },
-   {
-      "week": 8,
-      "topic": "Gravitation"
-   },
-   {
-      "week": 9,
-      "topic": "Simple Harmonic Motion"
-   },
-   {
-      "week": 10,
-      "topic": "Fluids"
-   }
-]
-},
-{ "courseID": "CHM307",
-"courseName": "CHM 307",
-"courseOutline": [
-   {
-      "week": 1,
-      "topic": "Introduction to Physics"
-   },
-   {
-      "week": 2,
-      "topic": "Measurement"
-   },
-   {
-      "week": 3,
-      "topic": "Motion"
-   },
-   {
-      "week": 4,
-      "topic": "Force"
-   },
-   {
-      "week": 5,
-      "topic": "Work, Energy and Power"
-      
-   },
-   {
-      "week": 6,
-      "topic": "Momentum"
-     
-   },
-   {
-      "week": 7,
-      "topic": "Rotational Motion"
-   },
-   {
-      "week": 8,
-      "topic": "Gravitation"
-   },
-   {
-      "week": 9,
-      "topic": "Simple Harmonic Motion"
-   },
-   {
-      "week": 10,
-      "topic": "Fluids"
-   }
-]
-},
-{ "courseID": "GST303",
-"courseName": "GST 303",
-"courseOutline": [
-   {
-      "week": 1,
-      "topic": "Introduction to Physics"
-   },
-   {
-      "week": 2,
-      "topic": "Measurement"
-   },
-   {
-      "week": 3,
-      "topic": "Motion"
-   },
-   {
-      "week": 4,
-      "topic": "Force"
-   },
-   {
-      "week": 5,
-      "topic": "Work, Energy and Power"
-      
-   },
-   {
-      "week": 6,
-      "topic": "Momentum"
-     
-   },
-   {
-      "week": 7,
-      "topic": "Rotational Motion"
-   },
-   {
-      "week": 8,
-      "topic": "Gravitation"
-   },
-   {
-      "week": 9,
-      "topic": "Simple Harmonic Motion"
-   },
-   {
-      "week": 10,
-      "topic": "Fluids"
-   }
-]
-}
-
-
-]
+         "topic": "Fluids",
+         "content": "Explore the properties of fluids, buoyancy, and the principles of fluid dynamics."
+       }
+     ]
+   },
+   {
+     "courseID": "CHM203",
+     "courseName": "Chemistry 203",
+     "courseOutline": [
+       {
+         "week": 1,
+         "topic": "Atomic Structure",
+         "content": "Explore the history of atomic models, electron configurations, and periodic trends."
+       },
+       {
+         "week": 2,
+         "topic": "Chemical Bonding",
+         "content": "Learn about ionic, covalent, and metallic bonding and their properties."
+       },
+       {
+         "week": 3,
+         "topic": "Stoichiometry",
+         "content": "Understand chemical equations, mole concept, and calculations based on stoichiometry."
+       },
+       {
+         "week": 4,
+         "topic": "States of Matter",
+         "content": "Study solids, liquids, and gases, along with the kinetic molecular theory."
+       },
+       {
+         "week": 5,
+         "topic": "Thermodynamics",
+         "content": "Learn the principles of thermodynamics, including enthalpy, entropy, and Gibbs free energy."
+       },
+       {
+         "week": 6,
+         "topic": "Chemical Kinetics",
+         "content": "Understand the rates of chemical reactions and factors affecting reaction speed."
+       },
+       {
+         "week": 7,
+         "topic": "Equilibrium",
+         "content": "Study the concept of chemical equilibrium, Le Chatelier’s principle, and equilibrium constants."
+       },
+       {
+         "week": 8,
+         "topic": "Acids and Bases",
+         "content": "Learn about pH, strength of acids and bases, and buffer solutions."
+       },
+       {
+         "week": 9,
+         "topic": "Electrochemistry",
+         "content": "Understand redox reactions, electrochemical cells, and their applications."
+       },
+       {
+         "week": 10,
+         "topic": "Organic Chemistry Basics",
+         "content": "Explore the basics of organic compounds, including nomenclature and functional groups."
+       }
+     ]
+   },
+   {
+     "courseID": "GST203",
+     "courseName": "General Studies 203",
+     "courseOutline": [
+       {
+         "week": 1,
+         "topic": "Communication Skills",
+         "content": "Understand the importance of effective communication in academic and professional settings."
+       },
+       {
+         "week": 2,
+         "topic": "Critical Thinking",
+         "content": "Learn how to analyze problems and make logical decisions."
+       },
+       {
+         "week": 3,
+         "topic": "Ethics and Values",
+         "content": "Explore ethical decision-making and the role of values in society."
+       },
+       {
+         "week": 4,
+         "topic": "Environmental Awareness",
+         "content": "Study the impact of human activities on the environment and sustainable solutions."
+       },
+       {
+         "week": 5,
+         "topic": "Cultural Diversity",
+         "content": "Learn about cultural differences and their influence on global interactions."
+       },
+       {
+         "week": 6,
+         "topic": "Time Management",
+         "content": "Understand strategies for effective time management in personal and professional life."
+       },
+       {
+         "week": 7,
+         "topic": "Teamwork",
+         "content": "Learn the importance of collaboration and skills for working in teams."
+       },
+       {
+         "week": 8,
+         "topic": "Leadership",
+         "content": "Study the qualities of effective leaders and leadership styles."
+       },
+       {
+         "week": 9,
+         "topic": "Conflict Resolution",
+         "content": "Explore strategies for managing and resolving conflicts."
+       },
+       {
+         "week": 10,
+         "topic": "Personal Development",
+         "content": "Learn how to set goals, build self-awareness, and achieve personal growth."
+       }
+     ]
+   },
+   {
+      "courseID": "MAT101",
+      "courseName": "Mathematics 101",
+      "courseOutline": [
+        { "week": 1, "topic": "Algebra", "content": "Introduction to algebraic expressions, equations, and inequalities." },
+        { "week": 2, "topic": "Functions", "content": "Study of functions, domain, range, and graphing." },
+        { "week": 3, "topic": "Limits", "content": "Understanding the concept of limits and continuity in calculus." },
+        { "week": 4, "topic": "Differentiation", "content": "Basic differentiation rules and applications." },
+        { "week": 5, "topic": "Integration", "content": "Introduction to integration and techniques of integration." },
+        { "week": 6, "topic": "Linear Algebra", "content": "Matrix operations, determinants, and systems of equations." },
+        { "week": 7, "topic": "Sequences and Series", "content": "Exploration of arithmetic and geometric progressions." },
+        { "week": 8, "topic": "Vectors", "content": "Introduction to vector algebra and applications in physics." },
+        { "week": 9, "topic": "Probability", "content": "Basic concepts of probability and combinatorics." },
+        { "week": 10, "topic": "Statistics", "content": "Descriptive statistics and introduction to data analysis." }
+      ]
+    },
+    {
+      "courseID": "PHY101",
+      "courseName": "Physics 101",
+      "courseOutline": [
+        { "week": 1, "topic": "Introduction to Physics", "content": "Overview of physics principles and their significance." },
+        { "week": 2, "topic": "Vectors and Scalars", "content": "Understanding quantities in physics and their applications." },
+        { "week": 3, "topic": "Kinematics", "content": "Study of motion in one and two dimensions." },
+        { "week": 4, "topic": "Dynamics", "content": "Newton's laws of motion and force applications." },
+        { "week": 5, "topic": "Energy", "content": "Work, energy, and power concepts in physical systems." },
+        { "week": 6, "topic": "Momentum", "content": "Principles of momentum and collisions." },
+        { "week": 7, "topic": "Circular Motion", "content": "Centripetal force and motion in circular paths." },
+        { "week": 8, "topic": "Waves", "content": "Introduction to wave properties and behavior." },
+        { "week": 9, "topic": "Thermal Physics", "content": "Study of heat, temperature, and thermal expansion." },
+        { "week": 10, "topic": "Electrostatics", "content": "Charge, electric fields, and potential." }
+      ]
+    },
+    {
+      "courseID": "CHM103",
+      "courseName": "Chemistry 103",
+      "courseOutline": [
+        { "week": 1, "topic": "Atomic Theory", "content": "Basic atomic structure and models." },
+        { "week": 2, "topic": "Periodic Table", "content": "Understanding periodic trends and element properties." },
+        { "week": 3, "topic": "Chemical Bonding", "content": "Ionic and covalent bonding principles." },
+        { "week": 4, "topic": "Stoichiometry", "content": "Quantitative relationships in chemical reactions." },
+        { "week": 5, "topic": "States of Matter", "content": "Behavior and properties of gases, liquids, and solids." },
+        { "week": 6, "topic": "Thermochemistry", "content": "Energy changes in chemical reactions." },
+        { "week": 7, "topic": "Chemical Equilibrium", "content": "Dynamic nature of equilibrium in reactions." },
+        { "week": 8, "topic": "Acid-Base Reactions", "content": "Concepts of pH, acids, bases, and titration." },
+        { "week": 9, "topic": "Redox Reactions", "content": "Electron transfer and balancing redox equations." },
+        { "week": 10, "topic": "Organic Chemistry Basics", "content": "Introduction to hydrocarbons and functional groups." }
+      ]
+    },
+    {
+      "courseID": "CHM107",
+      "courseName": "Chemistry 107",
+      "courseOutline": [
+        { "week": 1, "topic": "Matter and Measurement", "content": "Classification of matter and measurement techniques." },
+        { "week": 2, "topic": "Atoms and Molecules", "content": "Structure and properties of atoms and molecules." },
+        { "week": 3, "topic": "Chemical Reactions", "content": "Types of reactions and balancing equations." },
+        { "week": 4, "topic": "Solutions", "content": "Properties of solutions and concentration calculations." },
+        { "week": 5, "topic": "Thermodynamics", "content": "Energy changes and thermodynamic principles." },
+        { "week": 6, "topic": "Kinetics", "content": "Factors affecting reaction rates." },
+        { "week": 7, "topic": "Acids and Bases", "content": "Introduction to acid-base theory and titration." },
+        { "week": 8, "topic": "Electrochemistry", "content": "Redox reactions and electrochemical cells." },
+        { "week": 9, "topic": "Polymers", "content": "Basics of polymer chemistry and applications." },
+        { "week": 10, "topic": "Environmental Chemistry", "content": "Chemistry of air, water, and pollution." }
+      ]
+    }
+    ,{
+      "courseID": "MAT201",
+      "courseName": "Mathematics 201",
+      "courseOutline": [
+        { "week": 1, "topic": "Advanced Calculus", "content": "Functions of multiple variables and partial derivatives." },
+        { "week": 2, "topic": "Differential Equations", "content": "Introduction to first-order and higher-order differential equations." },
+        { "week": 3, "topic": "Vector Calculus", "content": "Gradient, divergence, and curl concepts." },
+        { "week": 4, "topic": "Complex Numbers", "content": "Study of complex numbers and their applications in engineering." },
+        { "week": 5, "topic": "Laplace Transforms", "content": "Transformation techniques for solving differential equations." },
+        { "week": 6, "topic": "Fourier Series", "content": "Analysis of periodic functions using Fourier series." },
+        { "week": 7, "topic": "Numerical Methods", "content": "Introduction to numerical approximation techniques." },
+        { "week": 8, "topic": "Probability and Statistics", "content": "Probability distributions and statistical inference." },
+        { "week": 9, "topic": "Linear Programming", "content": "Optimization methods in mathematical modeling." },
+        { "week": 10, "topic": "Applications in Engineering", "content": "Case studies of mathematical applications in real-world engineering problems." }
+      ]
+    },
+    {
+      "courseID": "PHY201",
+      "courseName": "Physics 201",
+      "courseOutline": [
+        { "week": 1, "topic": "Mechanics", "content": "Advanced mechanics, including rotational motion and angular momentum." },
+        { "week": 2, "topic": "Gravitation", "content": "Newton's law of gravitation and orbital mechanics." },
+        { "week": 3, "topic": "Oscillations", "content": "Study of simple harmonic motion and damped oscillations." },
+        { "week": 4, "topic": "Fluid Mechanics", "content": "Properties of fluids, pressure, and buoyancy." },
+        { "week": 5, "topic": "Thermodynamics", "content": "Heat engines, laws of thermodynamics, and entropy." },
+        { "week": 6, "topic": "Electric Fields", "content": "Electric field lines and potentials." },
+        { "week": 7, "topic": "Magnetic Fields", "content": "Magnetic force, fields, and electromagnetic induction." },
+        { "week": 8, "topic": "Electromagnetic Waves", "content": "Wave propagation and the electromagnetic spectrum." },
+        { "week": 9, "topic": "Modern Physics", "content": "Introduction to quantum mechanics and relativity." },
+        { "week": 10, "topic": "Applications in Engineering", "content": "Real-world applications of advanced physics in technology." }
+      ]
+    },
+    {
+      "courseID": "CHM203",
+      "courseName": "Chemistry 203",
+      "courseOutline": [
+        { "week": 1, "topic": "Inorganic Chemistry", "content": "Study of transition metals and coordination compounds." },
+        { "week": 2, "topic": "Analytical Techniques", "content": "Spectroscopy, chromatography, and qualitative analysis." },
+        { "week": 3, "topic": "Chemical Thermodynamics", "content": "Enthalpy, entropy, and free energy changes." },
+        { "week": 4, "topic": "Reaction Kinetics", "content": "Mechanisms and factors affecting reaction rates." },
+        { "week": 5, "topic": "Organic Chemistry", "content": "Detailed study of functional groups and organic synthesis." },
+        { "week": 6, "topic": "Polymers and Macromolecules", "content": "Polymerization techniques and industrial applications." },
+        { "week": 7, "topic": "Environmental Chemistry", "content": "Study of pollutants and green chemistry principles." },
+        { "week": 8, "topic": "Surface Chemistry", "content": "Adsorption, catalysis, and colloids." },
+        { "week": 9, "topic": "Electrochemistry", "content": "Applications of electrochemical cells in energy storage." },
+        { "week": 10, "topic": "Industrial Applications", "content": "Chemistry in industrial processes and materials science." }
+      ]
+    },
+    {
+      "courseID": "GST203",
+      "courseName": "General Studies 203",
+      "courseOutline": [
+        { "week": 1, "topic": "Critical Thinking", "content": "Development of analytical and logical reasoning skills." },
+        { "week": 2, "topic": "Globalization", "content": "Impact of globalization on culture, economy, and society." },
+        { "week": 3, "topic": "Environmental Awareness", "content": "Understanding environmental challenges and sustainable practices." },
+        { "week": 4, "topic": "Entrepreneurship", "content": "Principles of starting and managing a business." },
+        { "week": 5, "topic": "Effective Communication", "content": "Improving written and oral communication skills." },
+        { "week": 6, "topic": "Ethics and Leadership", "content": "Exploration of ethical principles and leadership styles." },
+        { "week": 7, "topic": "Conflict Resolution", "content": "Techniques for resolving interpersonal and group conflicts." },
+        { "week": 8, "topic": "Teamwork and Collaboration", "content": "Skills for effective teamwork in academic and professional settings." },
+        { "week": 9, "topic": "Technology and Society", "content": "Influence of technology on modern society." },
+        { "week": 10, "topic": "Civic Responsibility", "content": "Understanding rights, duties, and active participation in governance." }
+      ]
+    }
+ ]
+ 
