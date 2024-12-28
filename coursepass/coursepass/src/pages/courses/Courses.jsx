@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import "./Courses.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { fetchCourseDetails } from '../../redux/slice';
+import { fetchCourseDetails, fetchDashboardCourses } from '../../redux/slice';
 
 const Courses = () => {
   const { courseID } = useParams();
@@ -12,7 +12,7 @@ const Courses = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const { selectedCourse, status } = useSelector((state) => state.courses);
+  const { dashboardCourses, selectedCourse, status } = useSelector((state) => state.courses);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,6 +20,7 @@ const Courses = () => {
       setError(null);
 
       try {
+        dispatch(fetchDashboardCourses());
         dispatch(fetchCourseDetails(courseID)); 
       } catch (error) {
         console.error('Error fetching course:', error);
@@ -49,21 +50,25 @@ const Courses = () => {
   }
 
   return (
+    console.log('all courses:', dashboardCourses),
+
+
     <>
       <div className="header_container">
         <div className="filter_container">
-          <select 
-            name="college" 
-            id="college" 
-            className="select" 
-          >
-            <option value="">Course Lists</option>
-            {selectedCourse ? selectedCourse.courseOutline?.map((course) => (
-              <option key={course.courseID || course.id} value={course.courseID || course.id}>
-                {course.courseName || course.name}
-              </option>
-            )) : null}
-          </select>
+        <select 
+                            name="college" 
+                             id="college" 
+                            className="select" 
+                            // onChange={handleCollegeChange}
+                          >
+                            <option value="">Course Lists</option>
+                            {dashboardCourses.map((course) => (
+                              <option key={course.courseID} value={course.courseID}>
+                              {course.name}
+                            </option>
+                               ))}
+                         </select>
         </div>
       </div>
 
@@ -87,3 +92,17 @@ const Courses = () => {
 };
 
 export default Courses;
+
+                        //   <select 
+                        //     name="college" 
+                        //      id="college" 
+                        //     className="select" 
+                        //     // onChange={handleCollegeChange}
+                        //   >
+                        //     <option value="">Course Lists</option>
+                        //     {courses.map((course) => (
+                        //       <option key={course.courseID} value={course.courseID}>
+                        //       {course.courseName}
+                        //     </option>
+                        //        ))}
+                        //  </select>
