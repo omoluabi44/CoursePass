@@ -8,3 +8,8 @@
     border-radius: 5px;
     border: 1px solid #ccc;
   }
+
+  .course_content{
+    display: flex;
+    flex-direction: column;
+  }

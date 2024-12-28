@@ -13,7 +13,28 @@ select{
   border-radius: 5px;
   border: 1px solid #ccc;
 }
+.content {
+  display: flex;
+  flex-direction: column;
+  
+}
 
+.content ul{
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+  justify-content:space-evenly
+}
+.content ul li{
+ padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+  overflow: hidden;
+
+ 
+
+}
 /*
 CHAT CSS
 */

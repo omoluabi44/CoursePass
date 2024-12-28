@@ -107,7 +107,7 @@ export const CourseContent = () => {
                     </select>
                 </div>
             </div>
-            <div>
+            <div className='course_content'>
                 <h1><strong>Week</strong> {week}: {topic}</h1>
                 <p>{content}</p>
                 <CourseNavigation

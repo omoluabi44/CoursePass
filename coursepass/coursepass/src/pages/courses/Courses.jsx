@@ -1,7 +1,7 @@
 
 
 import React, { useEffect, useState } from 'react';
-import "./Courses.css";
+import s from  "./Courses.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchCourseDetails, fetchDashboardCourses } from '../../redux/slice';
@@ -64,12 +64,12 @@ const Courses = () => {
 
 
     <>
-      <div className="header_container">
-        <div className="filter_container">
+      <div className={s.header_container}>
+        <div className={s.filter_container}>
         <select 
                             name="college" 
                              id="college" 
-                            className="select" 
+                            className={s.select} 
                             onChange={(e)=>{
                               const courseId = e.target.value;
                               if(courseId){
@@ -90,8 +90,8 @@ const Courses = () => {
         </div>
       </div>
 
-      <div className="container">
-        <div className="content">
+      <div className={s.container}>
+        <div className={s.content}>
           <h2>{selectedCourse.courseName || selectedCourse.name}</h2>
           <h3></h3>
           {selectedCourse.courseOutline?.length > 0 ? (
