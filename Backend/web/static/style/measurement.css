@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f4f4f4; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0,0,0,0.60)), url("/static/images/image3.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.measurements-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.measurements-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.measurement {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.measurement label {
+    color: #555;
+}
+
+.measurement span {
+    font-weight: bold;
+    color: #000;
+}
