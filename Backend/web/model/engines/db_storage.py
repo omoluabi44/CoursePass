@@ -4,11 +4,12 @@ from sqlalchemy import (create_engine)
 from sqlalchemy.ext.declarative import declarative_base
 from ..base_model import Base
 from ..user import User
-from ..users_measure import Measurement
 from ..all_course import Courses_list
+from ..course import Courses
+from ..course_content import Content
 from sqlalchemy.orm import sessionmaker, scoped_session
 
-classes = [User, Measurement, Courses_list]
+classes = [User,  Courses_list, Courses,Content]
 
 class DBStorage:
     __engine = None
@@ -43,6 +44,10 @@ class DBStorage:
     def save(self):
             """save the object to the current database session"""
             self.__session.commit()
+    def rollback(self):
+            """Rollback the current session in case of error"""
+            if self.__session:
+                self.__session.rollback()
 
     def delete(self, obj=None):
         """Delete obj from the current database session if not None"""

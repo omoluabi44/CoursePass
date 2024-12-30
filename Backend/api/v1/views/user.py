@@ -2,10 +2,10 @@ from api.v1.views import app_views
 from flask import jsonify, make_response, abort, request
 from web.model import storage
 from web.model.user import User
-from web.model.users_measure import Measurement
+
 from werkzeug.utils import secure_filename
 import os
-from web.measure import pro_image
+
 
 UPLOAD_FOLDER = 'uploads/'
 if not os.path.exists(UPLOAD_FOLDER):
@@ -67,14 +67,14 @@ def create_user():
         'height': height
     }
 
-    instance = User(**data)
-    instance.save()
-    T_height, T_leg, T_hand, T_chest, T_hip = pro_image(file_path, instance.height)
-    # measures = Measurement(T_height, T_hand, T_leg,  T_chest, T_hip)
-    measures = Measurement(T_height, T_hip, T_chest, T_leg, T_hand)
-    storage.new( measures)
-    storage.save()
-    print(measures.to_dict())
+    # instance = User(**data)
+    # instance.save()
+    # T_height, T_leg, T_hand, T_chest, T_hip = pro_image(file_path, instance.height)
+    # # measures = Measurement(T_height, T_hand, T_leg,  T_chest, T_hip)
+    # measures = Measurement(T_height, T_hip, T_chest, T_leg, T_hand)
+    # storage.new( measures)
+    # storage.save()
+    # print(measures.to_dict())
     return make_response(jsonify(measures.to_dict()), 201)
 
 

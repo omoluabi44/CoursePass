@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap');
+
+:root {
+    --base-clr: #fff;
+    --line-clr: #42434a;
+    --hover-clr: #b0b3c1;
+    --text-clr: #11121a;
+    --accent-clr: #142d71;
+    --secondary-text-clr: #b0b3c1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5rem;
+}
+
+.layout {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 250px 1fr;
+    height: 100vh; 
+}
+
+.layout > .admin {
+    grid-column: 1 / -1; 
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--base-clr);
+    color: var(--text-clr);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 1px solid var(--line-clr); 
+    padding: 1rem;
+}
+
+.layout > .Sidebar {
+    grid-column: 1 / 2; 
+    grid-row: 2 / 3; 
+    background-color: var(--hover-clr);
+    color: var(--text-clr);
+    height: 100%; 
+}
+
+.layout > .main {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3; 
+    overflow: auto;
+    padding: 1rem;
+    background-color: var(--base-clr);
+}

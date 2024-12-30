@@ -5,7 +5,7 @@ from web.model.all_course import Courses_list
 from werkzeug.utils import secure_filename
 import os
 
-@app_views.route('/courses', methods=["GET"], strict_slashes=False)
+@app_views.route('/all_courses', methods=["GET"], strict_slashes=False)
 def get_Courses_list():
     all_courses= storage.all(Courses_list).values()
     list_courses = []
@@ -15,7 +15,7 @@ def get_Courses_list():
 
 
 
-@app_views.route('/courses', methods=['POST'], strict_slashes=False)
+@app_views.route('/all_courses', methods=['POST'], strict_slashes=False)
 # @swag_from('documentation/user/post_user.yml', methods=['POST'])
 def post_Courses_list():
     """
@@ -41,6 +41,8 @@ def post_Courses_list():
     instance = Courses_list(**data)
     instance.save()
     return make_response(jsonify(instance.to_dict()), 201)
+ 
+
 
 
 # @app_views.route('/measure/<id>', methods=["GET"], strict_slashes=False)

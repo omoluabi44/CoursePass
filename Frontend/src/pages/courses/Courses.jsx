@@ -30,8 +30,9 @@ const Courses = () => {
       setError(null);
 
       try {
-        dispatch(fetchDashboardCourses());
-        dispatch(fetchCourseDetails(courseID)); 
+        
+          await dispatch(fetchDashboardCourses()).unwrap();
+          await dispatch(fetchCourseDetails(courseID)).unwrap();
       } catch (error) {
         console.error('Error fetching course:', error);
         setError('Failed to fetch course data. Please try again later.');

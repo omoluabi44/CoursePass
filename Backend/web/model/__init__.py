@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 from .base_model import BaseModel
 from .user import User
-from .users_measure import Measurement
 from .engines.db_storage import DBStorage
 from os import getenv
 
