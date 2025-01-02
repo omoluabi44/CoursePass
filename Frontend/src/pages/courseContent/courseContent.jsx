@@ -193,7 +193,7 @@ export const CourseContent = () => {
         return <div>Loading course details...</div>;
     }
 
-    if (!selectedCourse || !selectedCourse.courseOutline) {
+    if (!selectedCourse ) {
         return <div>Course data is unavailable.</div>;
     }
 
@@ -238,9 +238,9 @@ export const CourseContent = () => {
                         onChange={(e) => {
                             console.log("invoke");
                             
-                            const week = parseInt(e.target.value);
+                            const week = (e.target.value);
                             if (week) {
-                                const selectedTopic = selectedCourse.courseOutline.find(topic => topic.week === week);
+                                const selectedTopic = selectedCourse.find(topic => topic.week === week);
                                 if (selectedTopic) {
                                     handleTopicClick(week, selectedTopic.topic, selectedTopic.content);
                                 }
@@ -248,7 +248,7 @@ export const CourseContent = () => {
                         }}
                     >
                         <option value="">{selectedCourse.courseName} Outline</option>
-                        {selectedCourse.courseOutline.map((course) => (
+                        {selectedCourse.map((course) => (
                             <option key={course.week} value={course.week}>
                                 {course.topic}
                             </option>
@@ -263,7 +263,7 @@ export const CourseContent = () => {
                 <CourseNavigation
                     courseId={courseID}
                     currentWeek={week}
-                    courseOutline={selectedCourse.courseOutline}
+                    courseOutline={selectedCourse}
                 />
             </div>
         </>

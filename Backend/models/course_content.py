@@ -9,7 +9,7 @@ from sqlalchemy.orm import relationship
 
 class Content(BaseModel, Base):
     __tablename__ = 'course_outline'
-    week = Column(String(20), nullable=True, unique=True)
+    week = Column(String(20), nullable=True)
     courseID = Column(String(60), ForeignKey('courses.courseID'), nullable=False)
     topic = Column(String(120), nullable=True)
     content = Column(String(520), nullable=True)

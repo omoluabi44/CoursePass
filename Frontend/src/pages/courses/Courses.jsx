@@ -21,6 +21,8 @@ const Courses = () => {
 
   };
   const handleTopicClick = (week, topic, content) =>{
+    console.log('week:', week, 'topic:', topic, 'content:', content);
+    
     navigate(`/courses/${courseID}/topics/${week}`, {state: {week,topic, content}});
   }
 
@@ -59,9 +61,12 @@ const Courses = () => {
   if (!selectedCourse) {
     return <div>No course found for this ID</div>;
   }
-
+  const firstCourse = selectedCourse[0];
+  console.log('First Course ID:', firstCourse.courseID);
+  console.log('First Course Content:', firstCourse.content);
   return (
-    console.log('all courses:', dashboardCourses),
+    console.log('selected courses:', selectedCourse[0].courseID),
+
 
 
     <>
@@ -93,11 +98,11 @@ const Courses = () => {
 
       <div className={s.container}>
         <div className={s.content}>
-          <h2>{selectedCourse.courseName || selectedCourse.name}</h2>
+          <h2>{selectedCourse[0].courseID}</h2>
           <h3></h3>
-          {selectedCourse.courseOutline?.length > 0 ? (
+          {selectedCourse?.length > 0 ? (
             <ul>
-              {selectedCourse.courseOutline.map((outline) => (
+              {selectedCourse.map((outline) => (
                 <li key={outline.week}
                 onClick={() => handleTopicClick(outline.week, outline.topic, outline.content)}
                 >
