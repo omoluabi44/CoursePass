@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
-from .base_model import BaseModel, Base
-from sqlalchemy import Column, String, Integer
+import models
+from models.base_model import BaseModel, Base
+from os import getenv
+import sqlalchemy
+from sqlalchemy import Column, String, ForeignKey
 from sqlalchemy.orm import relationship
+
 
 class Courses(BaseModel, Base):
     __tablename__ = 'courses'

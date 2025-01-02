@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
-from .base_model import BaseModel, Base
-from sqlalchemy import Column, String, Integer,ForeignKey
+import models
+from models.base_model import BaseModel, Base
+from os import getenv
+import sqlalchemy
+from sqlalchemy import Column, String, ForeignKey
 from sqlalchemy.orm import relationship
+
 
 class Content(BaseModel, Base):
     __tablename__ = 'courseOutline'
     week = Column(String(20), nullable=True)
     course_id = Column(String(60), ForeignKey('courses.id'), nullable=True)
     topic = Column(String(120), nullable=True)
-    content = Column(String(120), nullable=True)
+    content = Column(String(520), nullable=True)
    
 
 

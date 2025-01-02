@@ -44,10 +44,6 @@ class DBStorage:
     def save(self):
             """save the object to the current database session"""
             self.__session.commit()
-    def rollback(self):
-            """Rollback the current session in case of error"""
-            if self.__session:
-                self.__session.rollback()
 
     def delete(self, obj=None):
         """Delete obj from the current database session if not None"""

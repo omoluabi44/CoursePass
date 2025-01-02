@@ -2,7 +2,8 @@ import React from "react";
 // import Dashboard from "../pages/dashboard/Dashboard";
 import { Routes, Route } from "react-router-dom";
 import  CourseForm  from "../page/courses";
-import CourseContent from "../page/CourseContent";
+import CourseContent from "../page/courseContent";
+import CourseList from "../page/CourseList";
 import { Maths } from "../page/latex";
 const AppRoutes = () => {
     return (
@@ -11,6 +12,7 @@ const AppRoutes = () => {
         <Route path="/courses/:courseID" element={<Courses />} />
         <Route path="/Courses/:courseID/topics/:week" element={<CourseContent />} /> */}
         <Route path="/CourseForm" element={<CourseForm />}/>
+        <Route path="/CourseList" element={<CourseList />}/>
         <Route path="/CourseContent" element={<CourseContent />}/>
         <Route path="/Latex" element={<Maths />}/>
       </Routes>

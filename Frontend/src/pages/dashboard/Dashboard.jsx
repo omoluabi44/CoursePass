@@ -85,7 +85,7 @@ const Dashboard = () => {
             <option value="College of Basic Science">C B S</option>
             <option value="College of Social Science">C S S</option>
             <option value="College of Arts">C A</option>
-            <option value="College of Education">C E</option>
+            <option value="College of Environmenal">C E</option>
           </select>
           <select name="department" id="department" className={Styles.select} onChange={handleDepartmentChange}>
             <option value="">Select Department</option>
