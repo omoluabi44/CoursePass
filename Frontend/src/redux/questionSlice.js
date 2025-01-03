@@ -25,6 +25,7 @@ const questionSlice = createSlice({
   initialState: {
     questions: [],
     currentQuestionIndex: 0,
+    selectedAnswers: [],
     timer: 0,
     status: 'idle',
     courses: [] // Add a state to store the courses
@@ -48,6 +49,13 @@ const questionSlice = createSlice({
         state.timer -= 1;
       }
     },
+    stopTimer(state) {
+        clearInterval(state.timer);
+  },
+  storeAnswer(state, action){
+    const { questionIndex, answer } = action.payload;
+    state.selectedAnswers[questionIndex] = answer;
+  }
   },
   extraReducers: (builder) => {
     builder
@@ -75,5 +83,5 @@ const questionSlice = createSlice({
   },
 });
 
-export const { nextQuestion, prevQuestion, setTimer, decrementTimer } = questionSlice.actions;
+export const { nextQuestion, prevQuestion, setTimer, decrementTimer,stopTimer,storeAnswer } = questionSlice.actions;
 export default questionSlice.reducer;

@@ -5,6 +5,7 @@ import Courses from "../pages/courses/Courses"
 import {CourseSelection} from "../pages/pastQuestions/selectionPage";
 import { CourseContent } from "../pages/courseContent/courseContent";
 import { PastQuestion } from "../pages/pastQuestions/PastQuestion";
+import { ScorePage } from "../pages/pastQuestions/ScorePage";
 const AppRoutes = () => {
     return (
       <Routes>
@@ -13,6 +14,8 @@ const AppRoutes = () => {
         <Route path="/Courses/:courseID/topics/:week" element={<CourseContent />} />
         <Route path="/courseSelection" element={<CourseSelection />} />
         <Route path="/past-questions/:courseID" element={<PastQuestion />} />
+        <Route path="/score" element={<ScorePage />} />
+
       </Routes>
     );
   };

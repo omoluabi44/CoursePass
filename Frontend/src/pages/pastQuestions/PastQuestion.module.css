@@ -32,7 +32,23 @@
     padding: 10px;
     font-size: 1em;
     cursor: pointer;
+    border: 2px solid green;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: 0.3s ease, border-color 0.3s ease;
 }
+.option:hover{
+    /* transition: 0.3s ease; */
+    background-color: green;
+    color: #fff;
+}
+.option.selected {
+    background-color: green;
+    color: white;
+    border-color: green; /* Keep green border when selected */
+}
+    
 .button_section{
     display: flex;
     justify-content: space-between;
