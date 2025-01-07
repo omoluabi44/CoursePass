@@ -103,7 +103,7 @@ const Courses = () => {
           {selectedCourse?.length > 0 ? (
             <ul>
               {selectedCourse.map((outline) => (
-                <li key={outline.week}
+                <li className={s.li} key={outline.week}
                 onClick={() => handleTopicClick(outline.week, outline.topic, outline.content)}
                 >
                   <strong>Week {outline.week}:</strong> {outline.topic}

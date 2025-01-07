@@ -11,12 +11,13 @@
 *{
     margin: 0;
     padding: 0;
-    width: 100%;
+
     /* box-sizing: border-box; */
 }
 html{
     font-family: Popins, sans-serif;
     line-height: 1.5rem;
+
  }
  /* Layout container */
 /* Layout container */

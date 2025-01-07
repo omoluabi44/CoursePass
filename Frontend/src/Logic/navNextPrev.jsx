@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import s from "./navNextPrev.module.css"
 
 const CourseNavigation =({courseId, currentWeek, courseOutline}) => {
     const navigate = useNavigate();
@@ -21,8 +22,10 @@ const CourseNavigation =({courseId, currentWeek, courseOutline}) => {
     };
    return(
     <>
-     <button onClick={handlePrevious} disabled={isFirstTopic}> Previous </button>
+    <div className={s.button_container}>
+     <button  onClick={handlePrevious} disabled={isFirstTopic}> Previous </button>
      <button onClick={handleNext} disabled={isLastTopic}> Next </button>
+     </div>
     </>
    
    ) 

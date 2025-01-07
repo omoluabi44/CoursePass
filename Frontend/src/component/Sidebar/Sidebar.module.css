@@ -20,7 +20,7 @@
     border-right: 1px solid var(--line-clr);
     position: sticky;
     top:0;
-   border: none;
+    border: solid blue;
     align-self: start;
     overflow-y: auto; /* Enable vertical scrollbar */
     scrollbar-width: thin; /* For modern browsers */

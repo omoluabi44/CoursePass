@@ -9,21 +9,41 @@
   gap: 10px;
 }
 select{
+  width: 200px;
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  align-self: center;
+  display: flex;
+  align-items: center;
+}
+.li {
+  transition: 0.3s ease;
+  color: #142d71;
+
+}
+.li:hover{
+  background-color: #142d71;
+  color: #FFF;
+    transform: scale(1.05); 
+    gap: 10px;
 }
 .content {
   display: flex;
   flex-direction: column;
   
 }
+.content h2{
+  align-self: center;
+  color: #142d71;
+}
 
 .content ul{
   list-style-type: none;
-  display: flex;
-  gap: 10px;
-  justify-content:space-evenly
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 5px;
+
 }
 .content ul li{
  padding: 10px;

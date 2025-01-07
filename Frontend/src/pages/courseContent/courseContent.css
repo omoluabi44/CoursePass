@@ -1,3 +1,9 @@
+.container{
+ 
+
+  height: 100vh;
+}
+
 .filter_container{
     display: flex;
     justify-content: end;
@@ -12,4 +18,8 @@
   .course_content{
     display: flex;
     flex-direction: column;
+  }
+  .button_nav{
+    position:fixed;
+    bottom: 1px;
   }

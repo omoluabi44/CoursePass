@@ -211,6 +211,8 @@ export const CourseContent = () => {
     // Render course content
     return (
         <>
+        <div className="container">
+
             <div className="header_container">
                 <div className="filter_container">
                     <select
@@ -260,12 +262,15 @@ export const CourseContent = () => {
                 <h1><strong>Week</strong> {week}: {topic}</h1>
                 <p>{renderLatexInText(content)}</p>  
                 <p><Latex>{fraction}</Latex></p>
+                <div className="button_nav">
                 <CourseNavigation
                     courseId={courseID}
                     currentWeek={week}
                     courseOutline={selectedCourse}
                 />
+                </div>
             </div>
+        </div>
         </>
     );
 };
