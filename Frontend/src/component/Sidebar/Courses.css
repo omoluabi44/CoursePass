@@ -9,25 +9,7 @@
   
 
  }
- /* .container main{
-    padding: min(30px, 7%);
-
- }
- .container main p {
-    color: var(--secondary-text-clr);
-    margin-top: 5px;
-    margin-bottom: 15px;
- }
- .maincontainer{
-    border: 1px solid var(--line-clr);
-    border-radius: 1em;
-    margin-bottom: 20px;
-    padding: min(3em, 15%);
-    
  
- }
- .maincontainer h2 & p{margin-top: 1em}
- */
 
  #sidebar{
     box-sizing: border-box;

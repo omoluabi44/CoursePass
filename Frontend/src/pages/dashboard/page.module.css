@@ -68,3 +68,6 @@ justify-content: left;
   justify-content: space-between;
   gap: 10px;
 }
+.select option:hover{
+  background-color: #b0b3c1;
+}
