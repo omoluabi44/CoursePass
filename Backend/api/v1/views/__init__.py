@@ -8,3 +8,4 @@ from api.v1.views.index import *
 from api.v1.views.courses import *
 from api.v1.views.all_courses import *
 from api.v1.views.course_content import *
+from api.v1.views.questions import *

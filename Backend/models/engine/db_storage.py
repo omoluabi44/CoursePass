@@ -9,12 +9,13 @@ from models.base_model import BaseModel, Base
 from models.all_course import Courses_list
 from models.course_content import Content
 from models.course import Courses
+from models.questions import Questions
 from os import getenv
 import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-classes = {"Courses": Courses, "Courses_list": Courses_list, "Content": Content}
+classes = {"Courses": Courses, "Courses_list": Courses_list, "Content": Content, "Questions":Questions}
 
 
 class DBStorage:

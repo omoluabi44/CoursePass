@@ -75,10 +75,10 @@ const CourseForm = () => {
             <option value="CHM 203" key="">CHM 203</option>
             <option value="MAT 201" key="">MAT 201</option>
             <option value="GST 103" key="">GST 103</option>
-            <option value="CHM 107" key="">CHM 107</option>
-            <option value="CHM 103" key="">CHM 103</option>
-            <option value="PHY 101" key="">PHY 101</option>
-            <option value="MAT 101" key="">MAT 101</option>
+            <option value="CHM 107" >CHM 107</option>
+            <option value="CHM 103" >CHM 103</option>
+            <option value="PHY 101">PHY 101</option>
+            <option value="MAT 101" >MAT 101</option>
           </select>
         </div>
         <div className={s.form_group}>

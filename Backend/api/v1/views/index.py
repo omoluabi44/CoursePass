@@ -4,6 +4,7 @@ from models.course import Courses
 from models import storage
 from models.all_course import Courses_list
 from models.course_content import Content
+from models.questions import Questions
 from api.v1.views import app_views
 from flask import jsonify
 
@@ -17,8 +18,8 @@ def status():
 @app_views.route('/stats', methods=['GET'], strict_slashes=False)
 def number_objects():
     """ Retrieves the number of each objects by type """
-    classes = [Courses,Courses_list,Content]
-    names = ["courses", "courses_list", "content"]
+    classes = [Courses,Courses_list,Content,Questions]
+    names = ["courses", "courses_list", "content", "questions"]
 
     num_objs = {}
     for i in range(len(classes)):

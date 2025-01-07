@@ -10,9 +10,10 @@ from models.base_model import BaseModel
 from models.course import Courses
 from models.all_course import Courses_list
 from models.course_content import Content
+from models.questions import Questions
 from hashlib import md5
 
-classes = {"BaseModel": BaseModel, "Courses": Courses, "Courses_list": Courses_list, "Content": Content
+classes = {"BaseModel": BaseModel, "Courses": Courses, "Courses_list": Courses_list, "Content": Content, "Questions":Questions
           }
 
 
