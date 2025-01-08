@@ -6,23 +6,22 @@
 }
 
 .button_container button {
-    padding: 10px 20px; /* Adds padding for better button size */
-    font-size: 16px; /* Increases button text size */
-    border: 1px solid #ccc; /* Optional: Adds a border */
-    border-radius: 5px; /* Makes the buttons rounded */
+    padding: 10px 20px;
+    font-size: 16px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
     cursor: pointer;
-    background-color: #f8f9fa; /* Light background color for buttons */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
 }
-
 .button_container button:hover {
-    background-color: #e9ecef; /* Slightly darker on hover */
-    transform: scale(1.05); /* Slightly enlarges the button on hover */
+    background-color: #e9ecef; 
+    transform: scale(1.05); 
 }
 
 .button_container button:disabled {
     cursor: not-allowed;
-    background-color: #f1f1f1; /* Lighter color for disabled buttons */
-    color: #aaa; /* Lighter text color for disabled buttons */
+    background-color: #f1f1f1; 
+    color: #aaa;
     border-color: #ddd;
 }
