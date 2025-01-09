@@ -19,15 +19,14 @@ html{
     line-height: 1.5rem;
 
  }
- /* Layout container */
-/* Layout container */
+ 
 .layout {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
   }
   
-  /* Main content container */
+  
   .main {
     display: flex;
     flex-grow: 1; /* Ensure the main container takes all available space */
@@ -49,10 +48,11 @@ html{
   
   /* Content area styles */
   .content {
+    width: 100%;
     flex-grow: 1; /* Main content takes up remaining space */
     padding: 1rem; /* Add padding for content */
     overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport */
-    max-width: calc(100vw - 250px); /* Ensure content doesn't overflow the sidebar width */
+   
     box-sizing: border-box; /* Include padding in width calculations */
     height: 100vh; /* Full height of the viewport */
     overflow-x: hidden; /* Hide horizontal overflow */

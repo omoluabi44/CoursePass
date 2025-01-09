@@ -18,8 +18,6 @@ export const fetchQuestions = createAsyncThunk(
  console.log(data);
  const course = data.find((course) => course.courseID === courseID);
  return course ? course.questions : [];
- 
-    return data ? data.questions : [];
   }
 );
 

@@ -15,7 +15,7 @@ const App = () => {
  
     <Router>
         <div className="layout">
-          <Navbar />
+          {/* <Navbar /> */}
           <div className="main">
           
             <Sidebar />

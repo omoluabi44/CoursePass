@@ -1,10 +1,11 @@
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Styles from "./page.module.css";
 import { setCollege, setDepartment, setSemester, setlevel } from "../../redux/actions/filterActions";
 import { useNavigate } from "react-router-dom";
 import { fetchDashboardCourses } from "../../redux/slice";
+import { FaFilter } from "react-icons/fa";
 
 const Dashboard = () => {
   const state = useSelector((state) => {
@@ -16,17 +17,18 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const { dashboardCourses, status } = useSelector((state) => state.courses);
   const filters = useSelector((state) => state.filters);
+  const [showFilters, setShowFilters] = useState(false);
 
-  const handleStartCourse = (courseId) => {
-    navigate(`/courses/${courseId}`);
 
-  };
 
   useEffect(() => {
     dispatch(fetchDashboardCourses());
   }, [dispatch]);
 
+  const handleStartCourse = (courseId) => {
+    navigate(`/courses/${courseId}`);
 
+  };
   const handleCollegeChange = (e) => {
     dispatch(setCollege(e.target.value));
   };
@@ -69,7 +71,13 @@ const Dashboard = () => {
   return (
     <>
       <div className={Styles.header_container}>
+        <div className={Styles.head_filter_con}>
         <div className={Styles.course_heading}>All Courses</div>
+        <div className={Styles.filter_icon} onClick={() => setShowFilters(!showFilters)}>
+          <FaFilter />
+        </div>
+        </div>
+      
         {/* <div className={Styles.search_container}>
           <input className={Styles.search} type="text" placeholder="Search Courses"/>
           <button className={Styles.search_btn}>
@@ -78,7 +86,7 @@ const Dashboard = () => {
             </svg>
           </button>
         </div> */}
-        <div className={Styles.filter_container}>
+        <div className={`${Styles.filter_container} ${showFilters ? Styles.show_filters : ""}`}>
           <select name="college" id="college" className={Styles.select} onChange={handleCollegeChange}>
             <option value="">Select College</option>
             <option value="College of Engineering">C E T</option>
