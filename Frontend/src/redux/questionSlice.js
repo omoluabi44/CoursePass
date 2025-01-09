@@ -13,10 +13,13 @@ export const fetchCourses = createAsyncThunk(
 export const fetchQuestions = createAsyncThunk(
   'questions/fetchQuestions',
   async (courseID) => {
-    const response = await fetch('/pastQuestions.json');
+    const response = await fetch(`http://localhost:5000/api/v1/courses/${courseID}/questions`);
     const data = await response.json();
-    const course = data.find(course => course.courseID === courseID);
-    return course ? course.questions : [];
+ console.log(data);
+ const course = data.find((course) => course.courseID === courseID);
+ return course ? course.questions : [];
+ 
+    return data ? data.questions : [];
   }
 );
 

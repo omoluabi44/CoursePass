@@ -25,18 +25,10 @@
  
  .logo svg {
    fill: var(--text-clr);
-   transition: transform 0.5s ease; /* Smooth rotation */
+   transition: transform 0.5s ease; 
  }
  
- /* Rotate to face right */
- #sidebar.collapsed .rotateRight {
-   transform: rotate(180deg);
- }
  
- /* Rotate to face left */
- #sidebar.collapsed .rotateLeft {
-   transform: rotate(0deg);
- }
  
  .sidebar_menu li {
    list-style: none;

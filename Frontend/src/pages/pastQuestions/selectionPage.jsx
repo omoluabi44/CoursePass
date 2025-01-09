@@ -7,7 +7,7 @@ import s from './selectionPage.module.css'
 export const CourseSelection = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const { courses, status } = useSelector((state) => state.questions);
+    const { courses, status, questions} = useSelector((state) => state.questions);
     useEffect(() => {
         dispatch(fetchCourses());
       }, [dispatch]);
@@ -15,15 +15,17 @@ export const CourseSelection = () => {
 
     const handleCourseClick = (courseID) => {
         
-             dispatch(fetchQuestions(courseID));
-            navigate(`/past-questions/${courseID}`);
+      dispatch(fetchQuestions(courseID));
+      navigate(`/past-questions/${courseID}`);
+      console.log(questions)
+
 }
-  return (
+return (
     <>
     <div className="course-selection-container">
       <h2>Select a Course to Start the Quiz</h2>
       
-      {/* Check if courses are being loaded */}
+
       {status === 'loading' ? (
         <p>Loading courses...</p>
       ) : (

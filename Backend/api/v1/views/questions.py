@@ -16,13 +16,24 @@ def get_questions_list():
 
 @app_views.route('/courses/<course_id>/questions', methods=["GET"], strict_slashes=False)
 def get_question(course_id):
-    courses = storage.get(Courses,course_id )
-    if not courses:
+    course = storage.get(Courses,course_id )
+    if not course:
         abort(404)
    
-    questions_list = [questions.to_dict() for questions in courses.questions ]
-    return jsonify(questions_list)
+    response = {
+        "courseID": course.courseID,  # Use the courseID attribute from the course object
+        "questions": [
+            {
+                "questionText": question.questionText,  # Access attributes using dot notation
+                "options": question.options,           # Access options directly
+                "correctAnswer": question.correctAnswer,
+                "explanation": question.explanation
+            }
+            for question in course.questions  # Access associated questions
+        ]
+    }
 
+    return jsonify([response]) 
 
 @app_views.route('/questions', methods=['POST'], strict_slashes=False)
 # @swag_from('documentation/user/post_user.yml', methods=['POST'])
