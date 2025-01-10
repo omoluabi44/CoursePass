@@ -1,5 +1,5 @@
 .container{
-    /* background: linear-gradient(45deg, #1e3a8a, #142d71); */
+   
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 15px;
@@ -22,6 +22,7 @@
   background: #fff;
   text-align: center;
   padding: 30px 20px;
+  
 }
 
 
@@ -42,7 +43,7 @@
   position: relative; 
   margin-bottom: 10px;
 
-  /* align-items: center; */
+
 
 }
 
@@ -51,8 +52,10 @@
 }
 
  .course_heading{
-/* justify-content: left;
-background-color: black; */
+margin-bottom: 15px;
+text-transform: uppercase;
+font-weight: bold;
+color: var(--secondary-text-clr);
 }
 .search_container{
   display: flex;
@@ -74,7 +77,12 @@ background-color: black; */
   display: flex;
   justify-content: space-between;
   gap: 10px;
+ border-radius: 5px;
+  border: solid 0.03em;
   flex-wrap: wrap;
+  padding: 5px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 .select{
   padding: 8px 12px;
@@ -91,7 +99,67 @@ background-color: black; */
   display: none;
   /* fill: white; */
 }
+.select option{
+  color: var(--secondary-text-clr);
+  background-color: var(--base-clr);
+}
+.box_container{
+  border: solid 1px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+.box_container .cardList h3{
 
+  color: var(--secondary-text-clr);
+}
+.box_container .cardList button {
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 8px; 
+  background-color: var(--secondary-text-clr); 
+  color: white; 
+
+  font-size: 14px; 
+  font-weight: 500; 
+  cursor: pointer;
+  transition: all 0.3s ease; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}
+
+.box_container .cardList button:hover {
+  background-color: var(--accent-clr);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.box_container .cardList button:active {
+  transform: translateY(0); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.Loading {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%; 
+  animation: spin 1s linear infinite; 
+  position: absolute; 
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg); /* Maintain centering while rotating */
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg); /* Maintain centering while rotating */
+  }
+}
 
 @media (max-width: 768px) {
 .filter_icon{
@@ -104,6 +172,7 @@ background-color: black; */
     flex-direction: column;
     align-items: flex-start;
     gap:10px;
+   
    
   }
   .head_filter_con{

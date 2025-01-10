@@ -57,7 +57,7 @@ const Dashboard = () => {
 
 
   if (status === 'loading') {
-    return <p>Loading courses...</p>;
+    return <div className={Styles.Loading}></div>
   }
 
   if (status === 'failed') {
@@ -72,10 +72,10 @@ const Dashboard = () => {
     <>
       <div className={Styles.header_container}>
         <div className={Styles.head_filter_con}>
-        <div className={Styles.course_heading}>All Courses</div>
-        <div className={Styles.filter_icon} onClick={() => setShowFilters(!showFilters)}>
-          <FaFilter />
-        </div>
+            <div className={Styles.course_heading}>All Courses</div>
+            <div className={Styles.filter_icon} onClick={() => setShowFilters(!showFilters)}>
+              <FaFilter />
+            </div>
         </div>
       
         {/* <div className={Styles.search_container}>

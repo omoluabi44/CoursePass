@@ -7,6 +7,10 @@
    border-right: 1px solid var(--line-clr);
    position: sticky;
    transition: width 0.3s ease;
+   backdrop-filter: blur(10px);
+ }
+ .sidebar_menu{
+  width: 100%;
  }
  
  .logo {
@@ -17,15 +21,25 @@
    cursor: pointer;
  }
  
+ 
  .logo span {
-   color: var(--text-clr);
+   color: var( --secondary-text-clr);
    font-size: 1.3em;
    transition: opacity 0.3s ease;
+   font-weight: bold;
+ }
+ .sidebar_menu span{
+  font-size: .9rem;
+
+ }
+ .sidebar_menu span:hover{
+color: var(--secondary-text-clr);
+transition: transform 0.3s ease; 
  }
  
  .logo svg {
    fill: var(--text-clr);
-   transition: transform 0.5s ease; 
+   /* transition: transform 0.3s ease;  */
  }
  
  
@@ -52,8 +66,9 @@
    transition: fill 0.3s ease;
  }
  
- .sidebar_menu a:hover svg {
+ .sidebar_menu a:hover svg, span {
    fill: var(--secondary-text-clr);
+
  }
  
  /* Collapsed State */

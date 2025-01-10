@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap');
 :root{
-    --base-clr: #11121a;
+    --base-clr: #F4F4F4;
     --line-clr: #42434a;
     --hover-clr: #222533;
-    --text-clr:#e6e6ef;
-    --accent-clr:#5e63ff;
-    --secondary-text-clr: #b0b3c1;
+    --text-clr:black;
+    --accent-clr:#9defa9;
+    --secondary-text-clr: #142d71;
 
  }
 *{
     margin: 0;
     padding: 0;
 
-    /* box-sizing: border-box; */
+
 }
 html{
     font-family: Popins, sans-serif;
@@ -31,6 +31,7 @@ html{
     display: flex;
     flex-grow: 1; /* Ensure the main container takes all available space */
     overflow: hidden; /* Prevent overflow issues */
+    background-color: var(--base-clr);
   }
   
   /* Sidebar styles */
