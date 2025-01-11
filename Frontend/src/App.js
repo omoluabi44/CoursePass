@@ -14,8 +14,9 @@ const App = () => {
 
  
     <Router>
+    <Navbar />
         <div className="layout">
-          {/* <Navbar /> */}
+         
           <div className="main">
           
             <Sidebar />

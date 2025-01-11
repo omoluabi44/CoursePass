@@ -7,7 +7,9 @@
    border-right: 1px solid var(--line-clr);
    position: sticky;
    transition: width 0.3s ease;
-   backdrop-filter: blur(10px);
+  /* overflow: hidden; */
+   text-wrap: nowrap;
+ 
  }
  .sidebar_menu{
   width: 100%;
@@ -106,4 +108,37 @@ transition: transform 0.3s ease;
  
  #sidebar.collapsed .sidebar_menu a:hover svg {
    fill: var(--secondary-text-clr);
+ }
+
+ @media(max-width: 800px){
+  #sidebar{
+    height: 60px;
+    width: 100%;
+    border-right: none;
+    padding: 0;
+    border-top: 1px solid var(--line-clr) ;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+
+    > ul{
+  
+      display: grid;
+      grid-auto-columns: 60px;
+      grid-auto-flow: column;
+      align-items: center;
+      overflow-x: scroll ;
+      display: flex;
+      justify-content: center;
+ 
+      margin-top: -20px;
+    }
+    ul li{
+      height: 100%;
+    }
+  }
+  
+ .logo span, .logo svg, ul li span{
+    display: none;
+  }
  }

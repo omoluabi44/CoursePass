@@ -99,6 +99,7 @@ color: var(--secondary-text-clr);
   display: none;
   /* fill: white; */
 }
+
 .select option{
   color: var(--secondary-text-clr);
   background-color: var(--base-clr);
@@ -164,6 +165,7 @@ color: var(--secondary-text-clr);
 @media (max-width: 768px) {
 .filter_icon{
   display: block;
+
 }
   .header_container{
 
@@ -182,19 +184,40 @@ color: var(--secondary-text-clr);
    
     
   }
-  .filter_container{
-    display: none;
-    width: 100%;
-    gap:5px;
-    display: none;
+  .filter_container {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    width: 50%;
+    z-index: 999;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    padding-left: 10px;
+    opacity: 0; /* Start fully transparent */
+    visibility: hidden; /* Start hidden */
+    transition: opacity 0.9s ease, visibility 0.3s ease; /* Smooth transition */
+  }
+  .filter_container.show_filters {
+    display: flex; /* Ensure flex layout is applied */
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Show the element */
   }
   .select {
    width:100%;
    margin: 5px 0;
   }
-  .filter_container.show_filters {
-    transition: 0.3s ease;
-    display: flex; 
+  
+  
+  .filter_container.show_filters select{
+    width: 20%;
+  }
+  .filter_container.show_filters .b{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
   }
 }
 @media (max-width: 480px) {
@@ -203,6 +226,6 @@ color: var(--secondary-text-clr);
   }
 
   .select {
-    font-size: 12px; /* Reduce font size for dropdowns */
+    font-size: 12px; 
   }
 }

@@ -44,6 +44,12 @@ const Dashboard = () => {
   const handleSemesterChange = (e) => {
     dispatch(setSemester(e.target.value));
   };
+  const handleShowFilter =()=>{
+    setShowFilters(true)
+  }
+  const handleHideFilter =()=>{
+    setShowFilters(false)
+  }
 
 
   const filteredCourses = dashboardCourses.filter(course => {
@@ -73,7 +79,7 @@ const Dashboard = () => {
       <div className={Styles.header_container}>
         <div className={Styles.head_filter_con}>
             <div className={Styles.course_heading}>All Courses</div>
-            <div className={Styles.filter_icon} onClick={() => setShowFilters(!showFilters)}>
+            <div className={Styles.filter_icon} onClick={handleShowFilter}>
               <FaFilter />
             </div>
         </div>
@@ -87,6 +93,11 @@ const Dashboard = () => {
           </button>
         </div> */}
         <div className={`${Styles.filter_container} ${showFilters ? Styles.show_filters : ""}`}>
+          <div className={Styles.b}>
+          <svg onClick={handleHideFilter} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+          <span>close filter</span>
+          </div>
+          <div className={Styles.c}>
           <select name="college" id="college" className={Styles.select} onChange={handleCollegeChange}>
             <option value="">Select College</option>
             <option value="College of Engineering">C E T</option>
@@ -118,6 +129,7 @@ const Dashboard = () => {
             <option value="First Semester">First Semester</option>
             <option value="Second Semester">Second Semester</option>
           </select>
+          </div>
         </div>
       </div>
 

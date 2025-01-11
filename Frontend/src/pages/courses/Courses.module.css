@@ -52,92 +52,11 @@ select{
   background: #f9f9f9;
   overflow: hidden;
 
- 
-
-}
-/*
-CHAT CSS
-*/
-
-/* 
-.container {
-    display: flex;
-    justify-content: space-between;
- 
-  }
-
-#chatContainer {
-  display: flex;
-  flex-direction: column; 
-  height: 100vh; 
-  max-width: 600px; 
-  margin: 0 auto;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background: #f9f9f9;
 }
 
-
-.responConatiner {
-  flex: 1; 
-  overflow-y: auto; 
-  padding: 10px;
-  background-color: #fff;
+@media(max-width:800px){
+  .content h2{
+    align-self:flex-start;
+    margin: 10px;
+    }
 }
-
-
-.s.messageUser {
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #e6f7ff;
-  border-radius: 5px;
-  text-align: right;
-  max-width: 80%; 
-  word-wrap: break-word;
-}
-
-
-.s.messageAi {
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #f2f2f2;
-  border-radius: 5px;
-  text-align: left; 
-  max-width: 80%; 
-  word-wrap: break-word;
-}
-
-#s.inputContainer {
-  display: flex;
-  gap: 10px;
-  padding: 10px;
-  background: #f1f1f1;
-  border-top: 1px solid #ccc;
-  align-items: center;
-}
-
-
-#s.userInput {
-  flex: 1; 
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-  resize: none; 
-  height: 40px; 
-}
-
-
-#s.sendButton {
-  padding: 10px 20px;
-  background: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-#s.sendButton:hover {
-  background: #0056b3; 
-} */

@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap');
 :root{
+ 
     --base-clr: #F4F4F4;
     --line-clr: #42434a;
     --hover-clr: #222533;
     --text-clr:black;
     --accent-clr:#9defa9;
     --secondary-text-clr: #142d71;
-
  }
 *{
     margin: 0;
     padding: 0;
 
 
+}
+body{
+  min-height: 100vh;
 }
 html{
     font-family: Popins, sans-serif;
@@ -70,6 +73,11 @@ html{
   }
   
   /* Responsive adjustments */
+  @media(max-width: 800px){
+  .main{
+    grid-template-columns: 1fr;
+  }
+  }
   @media (max-width: 768px) {
     #sidebar {
       width: 200px; /* Adjust the sidebar width on smaller screens */
