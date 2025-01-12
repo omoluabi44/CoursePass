@@ -22,8 +22,8 @@ export const CourseSelection = () => {
 }
 return (
     <>
-    <div className="course-selection-container">
-      <h2>Select a Course to Start the Quiz</h2>
+    <div className={s.course_selection_container}>
+      <span> Select a Course to Start the Quiz</span>
       
 
       {status === 'loading' ? (

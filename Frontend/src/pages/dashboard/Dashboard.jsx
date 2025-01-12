@@ -78,7 +78,7 @@ const Dashboard = () => {
     <>
       <div className={Styles.header_container}>
         <div className={Styles.head_filter_con}>
-            <div className={Styles.course_heading}>All Courses</div>
+            <div className={Styles.course_heading}>DASHBOARD</div>
             <div className={Styles.filter_icon} onClick={handleShowFilter}>
               <FaFilter />
             </div>
