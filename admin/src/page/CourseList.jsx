@@ -11,7 +11,7 @@ const CourseForm = () => {
   const [status, setStatus] = useState(null);
   const [editingCourse, setEditingCourse] = useState(null);
 
-  const API_URL = "http://localhost:5000/api/v1/courses";
+  const API_URL = "https://omoluabi2.pythonanywhere.com/api/v1/courses";
 
   // Fetch all courses on component load
   useEffect(() => {
