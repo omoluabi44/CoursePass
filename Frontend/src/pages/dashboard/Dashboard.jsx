@@ -106,16 +106,7 @@ const Dashboard = () => {
             <option value="College of Arts">C A</option>
             <option value="College of Environmenal">C E</option>
           </select>
-          <select name="department" id="department" className={Styles.select} onChange={handleDepartmentChange}>
-            <option value="">Select Department</option>
-            <option value="Mechatronics Engineering">Mechatronics</option>
-            <option value="Mechanical Engineering">Mechanical</option>
-            <option value="Civil Engineering">Civil</option>
-            <option value="Electrical Engineering">Elect/Elect</option>
-            <option value="Chemical Engineering">Chemical</option>
-            <option value="Agricultural Engineering">Agric</option>
-            <option value="Computer Science">Computer</option>
-          </select>
+      
           <select name="level" id="level" className={Styles.select} onChange={handleLevelChange}>
             <option value="">Select Level</option>
             <option value="100 Level">100lv</option>

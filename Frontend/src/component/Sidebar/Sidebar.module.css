@@ -127,7 +127,8 @@ transition: transform 0.3s ease;
     z-index: 1;
     backdrop-filter:none;
     background-color: var(--base-clr);
-
+    border: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     > ul{
   
       display: grid;
@@ -147,5 +148,9 @@ transition: transform 0.3s ease;
   
  .logo span, .logo svg, ul li span{
     display: none;
+  }
+  .sidebar_menu svg{
+    width: 30px;
+    height: 30px;
   }
  }
