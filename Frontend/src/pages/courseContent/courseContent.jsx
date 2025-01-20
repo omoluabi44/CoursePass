@@ -70,6 +70,8 @@ export const CourseContent = () => {
        text = text.replace(/\*\*(.*?)\*\*/g, '<h2>$1</h2>')
        text = text.replace(/_p_/g, '<p>$1</p>')
        text = text.replace(/_(.*?)_/g, '<p>$1</p>');
+       text = text.replace(/\*\s*(.*?)\s*(?=\*|$)/g, '<li>$1</li>')
+       text = text.replace(/<li>.*<\/li>/g, '<ul>$&</ul>')
         // return <Latex>{`${text}`}</Latex>;
         return <div dangerouslySetInnerHTML={{__html:text}}/>;
     };
