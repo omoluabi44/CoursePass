@@ -23,3 +23,8 @@
     position:fixed;
     bottom: 1px;
   }
+
+  .course_content p{
+    margin: 100px;
+    width: 80%;
+  }
