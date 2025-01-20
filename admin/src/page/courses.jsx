@@ -119,24 +119,7 @@ const CourseForm = () => {
             <option value="Second Semester">Second Semester</option>
           </select>
         </div>
-        <div className={s.form_group}>
-          <label htmlFor="department">Department:</label>
-          <select 
-          name="department" 
-          id="department" 
-          required
-          value={formData.department}
-          onChange={handleChange}>
-            <option value="">Select Department</option>
-            <option value="Mechatronics Engineering">Mechatronics</option>
-            <option value="Mechanical Engineering">Mechanical</option>
-            <option value="Civil Engineering">Civil</option>
-            <option value="Electrical Engineering">Elect/Elect</option>
-            <option value="Chemical Engineering">Chemical</option>
-            <option value="Agricultural Engineering">Agric</option>
-            <option value="Computer Science">Computer</option>
-          </select>
-        </div>
+   
         <div className={s.form_group}>
           <label htmlFor="college">College:</label>
        

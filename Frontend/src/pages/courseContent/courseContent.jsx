@@ -204,8 +204,10 @@ export const CourseContent = () => {
     // Helper function to render LaTeX within text
     const renderLatexInText = (text) => {
         if (!text) return null;
-        // Using react-latex-next to handle both inline and display LaTeX
-        return <Latex>{`${text}`}</Latex>;
+       text = text.replace(/\*\*(.*?)\*\*/g, '<h2>$1</h2>')
+       text = text.replace(/_(.*?)_/g, '<p>$1</p>')
+        // return <Latex>{`${text}`}</Latex>;
+        return <div dangerouslySetInnerHTML={{__html:text}}/>;
     };
 
     // Render course content
