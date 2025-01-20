@@ -205,7 +205,7 @@ export const CourseContent = () => {
     const renderLatexInText = (text) => {
         if (!text) return null;
        text = text.replace(/\*\*(.*?)\*\*/g, '<h2>$1</h2>')
-       text = text.replace(/_p_/g, '<br>')
+       text = text.replace(/_p_/g, '<p>$1</p>')
         // return <Latex>{`${text}`}</Latex>;
         return <div dangerouslySetInnerHTML={{__html:text}}/>;
     };
@@ -262,7 +262,7 @@ export const CourseContent = () => {
             </div>
             <div className='course_content'>
                 <h1><strong>Week</strong> {week}: {topic}</h1>
-                <p>{renderLatexInText(content)}</p>  
+                <div>{renderLatexInText(content)}</div>  
                 <p><Latex>{fraction}</Latex></p>
                 <div className="button_nav">
                 <CourseNavigation
