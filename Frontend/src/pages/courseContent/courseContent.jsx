@@ -205,7 +205,7 @@ export const CourseContent = () => {
     const renderLatexInText = (text) => {
         if (!text) return null;
        text = text.replace(/\*\*(.*?)\*\*/g, '<h2>$1</h2>')
-       text = text.replace(/_p_/g, '<p></p>')
+       text = text.replace(/_p_/g, '<br>')
         // return <Latex>{`${text}`}</Latex>;
         return <div dangerouslySetInnerHTML={{__html:text}}/>;
     };
