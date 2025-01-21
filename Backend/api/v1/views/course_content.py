@@ -21,11 +21,12 @@ def get_course_content(course_id):
 
 # Get a specific content by ID
 @app_views.route('/content/<content_id>', methods=['GET'], strict_slashes=False)
-def get_content(courseID):
+def get_content(content_id):
     """
+    04e9c6bb-c341-4ee1-a86a-17e0782cd0ce
     Retrieves a specific Content by its ID.
     """
-    content = storage.get(Content, courseID)
+    content = storage.get_id(Content, content_id)
     if not content:
         abort(404)
     return jsonify(content.to_dict())
@@ -86,7 +87,7 @@ def delete_content(content_id):
     """
     Deletes Content by its ID.
     """
-    content = storage.get(Content, content_id)
+    content = storage.get_id(Content, content_id)
     if not content:
         abort(404)
     storage.delete(content)
