@@ -9,6 +9,7 @@ import { ScorePage } from "../pages/pastQuestions/ScorePage";
 const AppRoutes = () => {
     return (
       <Routes>
+        <Route path="/" element={<Dashboard />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/courses/:courseID" element={<Courses />} />
         <Route path="/Courses/:courseID/topics/:week" element={<CourseContent />} />
