@@ -1,4 +1,3 @@
-
 import { useLocation } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
@@ -7,9 +6,7 @@ import { fetchCourseDetails, fetchDashboardCourses } from '../../redux/slice';
 import { useNavigate } from "react-router-dom";
 import CourseNavigation from '../../Logic/navNextPrev';
 import s from "./courseContent.module.css";
-import 'katex/dist/katex.min.css';
-import Latex from 'react-latex-next';
-import TextWithMath from '../../Logic/textwithMath';
+import { MathJax } from 'better-react-mathjax'; 
 
 export const CourseContent = () => {
     const location = useLocation();
@@ -20,16 +17,14 @@ export const CourseContent = () => {
     const { courseID } = useParams();
     const { week, topic, content } = location.state || {};
 
-  
-    // Fetch course details and dashboard courses
     const { dashboardCourses, selectedCourse, status } = useSelector((state) => state.courses);
 
-    // Function to handle course start navigation
+
     const handleStartCourse = (courseId) => {
         navigate(`/courses/${courseId}`);
     };
 
-    // Function to handle topic click (navigate to detailed topic page)
+
     const handleTopicClick = (week, topic, content) => {
         navigate(`/courses/${courseID}/topics/${week}`, { state: { week, topic, content } });
     };
@@ -53,12 +48,52 @@ export const CourseContent = () => {
         fetchData();
     }, [dispatch, courseID]);
 
-    // If the course data is still loading or the course is not found
+    const renderContentWithMath = (content) => {
+        const inlineLatexRegex = /(\$.*?\$)/g; 
+        const blockLatexRegex = /(\$\$.*?\$\$)/g; 
+    
+   
+        const parts = content.split(new RegExp(`${blockLatexRegex.source}|${inlineLatexRegex.source}`));
+    
+        return parts.map((part, index) => {
+            if (!part) {
+                return null;
+            }
+    
+            if (blockLatexRegex.test(part)) {
+                return (
+                    <div key={index}>
+                        <MathJax className={s.maths}>{part}</MathJax>
+                    </div>
+                );
+            } else if (inlineLatexRegex.test(part)) {
+                return (
+                    <MathJax className={s.maths} key={index} inline>
+                        {part}
+                    </MathJax>
+                );
+            } else {
+                let text = part;
+                text = text.replace(/\*\*(.*?)\*\*/g, '<h2>$1</h2>');
+                text = text.replace(/_p_/g, '<p></p>');
+                text = text.replace(/_(.*?)_/g, '<p>$1</p>');
+                text = text.replace(/\*(.*?)\*/g, '<li>$1</li>');
+                text = text.replace(/<li>.*<\/li>/g, '<ul>$&</ul>');
+                return (
+                    <span
+                        key={index}
+                        dangerouslySetInnerHTML={{ __html: text }}
+                    />
+                );
+            }
+        });
+    };
+ 
     if (loading) {
         return <div>Loading course details...</div>;
     }
 
-    if (!selectedCourse ) {
+    if (!selectedCourse) {
         return <div>Course data is unavailable.</div>;
     }
 
@@ -66,98 +101,65 @@ export const CourseContent = () => {
         return <div>No topic found</div>;
     }
 
-    // Helper function to render LaTeX within text
-    // const renderLatexInText = (text) => {
-    //     if (!text) return null;
-    //    text = text.replace(/\*\*(.*?)\*\*/g, '<h2>$1</h2>')
-    //    text = text.replace(/_p_/g, '<p>$1</p>')
-    //    text = text.replace(/_(.*?)_/g, '<p>$1</p>');
-    //    text = text.replace(/\*(.*?)\*/g, '<li>$1</li>');
-    //    text = text.replace(/<li>.*<\/li>/g, '<ul>$&</ul>')
-    //     // return <Latex>{`${text}`}</Latex>;
-    //     return (
-    //         <div>
-    //             {/* {text.split('\n').map((line, index) => (
-    //                 <Latex key={index}>{line}</Latex>
-    //             ))} */}
-    //             <TextWithMath texts={text} />
-    //         </div>
-    //     );
-    // };
-
-            const renderLatexInText = (text) => {
-        if (!text) return null;
-
-        return (
-            <div>
-            <TextWithMath text={text} />
-            </div>
-        );
-        };
-
-    // Render course content
     return (
         <>
-        <div className="container">
-
-            <div className="header_container">
-                <div className="filter_container">
-                    <select
-                        name="college"
-                        id="college"
-                        className="select"
-                        onChange={(e) => {
-                            const courseId = e.target.value;
-                            if (courseId) {
-                                handleStartCourse(courseId);
-                            }
-                        }}
-                    >
-                        <option value="">Course Lists</option>
-                        {dashboardCourses.map((course) => (
-                            <option key={course.courseID} value={course.courseID}>
-                                {course.name}
-                            </option>
-                        ))}
-                    </select>
-                    <select
-                        name="college"
-                        id="college"
-                        className="select"
-                        onChange={(e) => {
-                            console.log("invoke");
-                            
-                            const week = (e.target.value);
-                            if (week) {
-                                const selectedTopic = selectedCourse.find(topic => topic.week === week);
-                                if (selectedTopic) {
-                                    handleTopicClick(week, selectedTopic.topic, selectedTopic.content);
+            <div className={s.container}>
+                <div className={s.header_container}>
+                    <div className={s.filter_container}>
+                        <select
+                            name="college"
+                            id="college"
+                            className="select"
+                            onChange={(e) => {
+                                const courseId = e.target.value;
+                                if (courseId) {
+                                    handleStartCourse(courseId);
                                 }
-                            }
-                        }}
-                    >
-                        <option value="">{selectedCourse.courseName} Outline</option>
-                        {selectedCourse.map((course) => (
-                            <option key={course.week} value={course.week}>
-                                {course.topic}
-                            </option>
-                        ))}
-                    </select>
+                            }}
+                        >
+                            <option value="">Course Lists</option>
+                            {dashboardCourses.map((course) => (
+                                <option key={course.courseID} value={course.courseID}>
+                                    {course.name}
+                                </option>
+                            ))}
+                        </select>
+                        <select
+                            name="college"
+                            id="college"
+                            className="select"
+                            onChange={(e) => {
+                                console.log("invoke");
+                                const week = (e.target.value);
+                                if (week) {
+                                    const selectedTopic = selectedCourse.find(topic => topic.week === week);
+                                    if (selectedTopic) {
+                                        handleTopicClick(week, selectedTopic.topic, selectedTopic.content);
+                                    }
+                                }
+                            }}
+                        >
+                            <option value="">{selectedCourse.courseName} Outline</option>
+                            {selectedCourse.map((course) => (
+                                <option key={course.week} value={course.week}>
+                                    {course.topic}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                </div>
+                <div className={s.course_content}>
+                    <h1><strong>Week</strong> {week}: {topic}</h1>
+                    <div className={s.contents}>{renderContentWithMath(content)}</div>
+                    <div className={s.button_nav}>
+                        <CourseNavigation
+                            courseId={courseID}
+                            currentWeek={week}
+                            courseOutline={selectedCourse}
+                        />
+                    </div>
                 </div>
             </div>
-            <div className={s.course_content}>
-                <h1><strong>Week</strong> {week}: {topic}</h1>
-                <div>{renderLatexInText(content)}</div>  
-               
-                <div className="button_nav">
-                <CourseNavigation
-                    courseId={courseID}
-                    currentWeek={week}
-                    courseOutline={selectedCourse}
-                />
-                </div>
-            </div>
-        </div>
         </>
     );
 };

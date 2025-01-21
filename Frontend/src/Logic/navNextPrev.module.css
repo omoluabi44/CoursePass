@@ -8,14 +8,15 @@
 .button_container button {
     padding: 10px 20px;
     font-size: 16px; 
-    border: 1px solid #ccc; 
+    border: 1px solid var(--accent-clr); 
     border-radius: 5px;
     cursor: pointer;
     background-color: #f8f9fa;
+    color: black;
     transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 .button_container button:hover {
-    background-color: #e9ecef; 
+    background-color:var(--accent-clr); 
     transform: scale(1.05); 
 }
 
@@ -25,3 +26,26 @@
     color: #aaa;
     border-color: #ddd;
 }
+
+  
+
+@media (max-width: 768px) {
+    .button_container {
+        flex-direction: row; 
+       gap: 150px;
+    }
+    .button_container button {
+        font-size: 10px; 
+     
+    }
+    .button_container.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .button_container.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+}
+
