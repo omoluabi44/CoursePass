@@ -73,16 +73,13 @@ color: var(--secondary-text-clr);
  font-size: 30px;
 }
 
-.filter_container{
+.filter_container .c{
+
+  display: flex;
+  flex-direction: row;
+}
+.filter_container .b{
   display: none;
-  justify-content: space-between;
-  gap: 10px;
- border-radius: 5px;
-  border: solid 0.03em;
-  flex-wrap: wrap;
-  padding: 5px;
-  background-color: #fff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 .select{
   padding: 8px 12px;
@@ -162,11 +159,21 @@ color: var(--secondary-text-clr);
   }
 }
 
+
 @media (max-width: 768px) {
 .filter_icon{
-  display: block;
+  display: flex;
 
 }
+.filter_container .c{
+
+  display: flex;
+  flex-direction: column;
+}
+.filter_container .b{
+  display: flex;
+}
+
   .header_container{
 
     display: flex;
@@ -185,7 +192,7 @@ color: var(--secondary-text-clr);
     
   }
   .filter_container {
-    display: none; /* Initially hidden */
+    display: none; 
     flex-direction: column;
     position: fixed;
     right: 0;
@@ -199,6 +206,15 @@ color: var(--secondary-text-clr);
     opacity: 0; /* Start fully transparent */
     visibility: hidden; /* Start hidden */
     transition: opacity 0.9s ease, visibility 0.3s ease; /* Smooth transition */
+    
+  justify-content: space-between;
+  gap: 10px;
+ border-radius: 5px;
+  border: solid 0.03em;
+  flex-wrap: wrap;
+  padding: 5px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   }
   .filter_container.show_filters {
     display: flex; /* Ensure flex layout is applied */
