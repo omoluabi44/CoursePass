@@ -15,6 +15,8 @@ const CourseContent = () => {
   const [status, setStatus] = useState(null);
 
   const apiBaseUrl = "https://omoluabi2.pythonanywhere.com/api/v1";
+  // const apiBaseUrl = "http://localhost:5000/api/v1";
+  
 
   const fetchCourseContent = async (courseId) => {
     if (!courseId) return;
