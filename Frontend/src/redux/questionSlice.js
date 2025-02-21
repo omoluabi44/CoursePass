@@ -14,6 +14,8 @@ export const fetchQuestions = createAsyncThunk(
   'questions/fetchQuestions',
   async (courseID) => {
     const response = await fetch(`omoluabi2.pythonanywhere.com/api/v1/courses/${courseID}/questions`);
+    console.log("invoke fetchQuestions");
+    
     const data = await response.json();
  console.log(data);
  const course = data.find((course) => course.courseID === courseID);
