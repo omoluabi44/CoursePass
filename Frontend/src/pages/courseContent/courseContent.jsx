@@ -79,6 +79,8 @@ export const CourseContent = () => {
                 text = text.replace(/_(.*?)_/g, '<p>$1</p>');
                 text = text.replace(/\*(.*?)\*/g, '<li>$1</li>');
                 text = text.replace(/<li>.*<\/li>/g, '<ul>$&</ul>');
+                text = text.replace(/__(.*?)__/g, '<strong>$1</strong>');
+                text = text.replace(/\/\/(.*?)\/\//g, '<em>$1</em>');
                 return (
                     <span
                         key={index}
