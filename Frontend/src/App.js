@@ -7,7 +7,7 @@ import AppRoutes from "../src/routes/appRoute"
 import { MathJaxContext } from 'better-react-mathjax';
 import config from './mathjaxConfig';
 // import { SpeedInsights } from "@vercel/speed-insights/react";
-import { SpeedInsights } from "@vercel/speed-insights";
+// import { SpeedInsights } from "@vercel/speed-insights";
 
 
 const App = () => {
