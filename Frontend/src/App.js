@@ -6,9 +6,6 @@ import { Navbar } from "../src/component/Navbar/Navbar";
 import AppRoutes from "../src/routes/appRoute"
 import { MathJaxContext } from 'better-react-mathjax';
 import config from './mathjaxConfig';
-// import { SpeedInsights } from "@vercel/speed-insights/react";
-// import { SpeedInsights } from "@vercel/speed-insights";
-import { Analytics } from '@vercel/analytics/next';
 
 
 const App = () => {
@@ -31,7 +28,7 @@ const App = () => {
         </div>
       </Router>
   </MathJaxContext>
-  <Analytics />
+
     </>
 
   );
