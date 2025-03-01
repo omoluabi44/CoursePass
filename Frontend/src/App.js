@@ -30,7 +30,7 @@ const App = () => {
         </div>
       </Router>
   </MathJaxContext>
-  <SpeedInsights />
+
     </>
 
   );
