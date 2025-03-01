@@ -6,10 +6,11 @@ import {CourseSelection} from "../pages/pastQuestions/selectionPage";
 import { CourseContent } from "../pages/courseContent/courseContent";
 import { PastQuestion } from "../pages/pastQuestions/PastQuestion";
 import { ScorePage } from "../pages/pastQuestions/ScorePage";
+import HomePage from "../pages/HomePage/HomePage";
 const AppRoutes = () => {
     return (
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/courses/:courseID" element={<Courses />} />
         <Route path="/Courses/:courseID/topics/:week" element={<CourseContent />} />
