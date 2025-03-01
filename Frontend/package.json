@@ -5,6 +5,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.0",
     "@types/react-latex": "^2.0.3",
+    "@vercel/analytics": "^1.5.0",
     "better-react-mathjax": "^2.0.4-beta1",
     "cra-template": "1.2.0",
     "katex": "^0.16.19",
@@ -43,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
   }
 }
