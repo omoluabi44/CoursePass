@@ -7,6 +7,7 @@ import { CourseContent } from "../pages/courseContent/courseContent";
 import { PastQuestion } from "../pages/pastQuestions/PastQuestion";
 import { ScorePage } from "../pages/pastQuestions/ScorePage";
 import HomePage from "../pages/HomePage/HomePage";
+import CProgrammingForm from "../pages/Form/Form";
 const AppRoutes = () => {
     return (
       <Routes>
@@ -17,6 +18,7 @@ const AppRoutes = () => {
         <Route path="/courseSelection" element={<CourseSelection />} />
         <Route path="/past-questions/:courseID" element={<PastQuestion />} />
         <Route path="/score" element={<ScorePage />} />
+        <Route path="/form" element={<CProgrammingForm />} />
 
       </Routes>
     );
