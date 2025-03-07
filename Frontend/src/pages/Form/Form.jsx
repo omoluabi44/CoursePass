@@ -53,7 +53,7 @@ const CProgrammingForm = () => {
       <div className="max-width-container">
         {/* Header */}
         <h1 className="main-header">
-          Introduction to Low Level Language (C Programming)
+          Introduction to Low Level Language (C Programming) & Data Structure and Algorithm
         </h1>
 
         {/* Course Outline */}
