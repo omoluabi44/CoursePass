@@ -46,7 +46,7 @@ const BuyMeCoffeePopup = () => {
         </p>
         <a
           className="buy-me-coffee-btn"
-          href="https://www.buymeacoffee.com/yourusername"
+          href="https://coursepasses.vercel.app/paymentPage"
           target="_blank"
           rel="noopener noreferrer"
         >
