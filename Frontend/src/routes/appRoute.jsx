@@ -8,6 +8,7 @@ import { PastQuestion } from "../pages/pastQuestions/PastQuestion";
 import { ScorePage } from "../pages/pastQuestions/ScorePage";
 import HomePage from "../pages/HomePage/HomePage";
 import CProgrammingForm from "../pages/Form/Form";
+import PaymentPage from "../pages/CoffeePayment/CoffeePayment";
 const AppRoutes = () => {
     return (
       <Routes>
@@ -19,6 +20,7 @@ const AppRoutes = () => {
         <Route path="/past-questions/:courseID" element={<PastQuestion />} />
         <Route path="/score" element={<ScorePage />} />
         <Route path="/form" element={<CProgrammingForm />} />
+        <Route path="/paymentPage" element={<PaymentPage />} />
 
       </Routes>
     );

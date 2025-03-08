@@ -6,6 +6,7 @@ import { Navbar } from "../src/component/Navbar/Navbar";
 import AppRoutes from "../src/routes/appRoute"
 import { MathJaxContext } from 'better-react-mathjax';
 import config from './mathjaxConfig';
+import PopupBanner from "./Logic/PopUp";
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
  
  <MathJaxContext config={config}>
     <Router>
+    <PopupBanner />
     <Navbar />
         <div className="layout">
          
