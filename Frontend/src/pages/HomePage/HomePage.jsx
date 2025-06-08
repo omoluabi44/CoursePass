@@ -28,7 +28,7 @@ const HomePage = () => {
           rel="noopener noreferrer"
         >
           <FaAndroid  size={24} style={{marginRight: "8px"}} />
-         Download Apk file
+         Download APK file
         </a>
       </div>
     </div>
