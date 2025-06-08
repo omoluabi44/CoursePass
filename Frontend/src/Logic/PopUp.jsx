@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import { FaGift, FaTimes } from "react-icons/fa";
+import { FaAndroid , FaTimes } from "react-icons/fa";
 import "./CryptoAirdropPopup.css";
 
 const CryptoAirdropPopup = () => {
@@ -40,7 +40,7 @@ const CryptoAirdropPopup = () => {
         </button>
         <h2>Download the mobile app(APK)!</h2>
         <p>
-         enjoy the full feature by download the apk
+         enjoy the full feature by downloading the apk
         </p>
         <a
           className="crypto-airdrop-btn"
@@ -48,8 +48,8 @@ const CryptoAirdropPopup = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGift size={24} style={{ marginRight: "8px" }} />
-          Join Now
+          <FaAndroid  size={24} style={{ marginRight: "8px" }} />
+          Downlaod Now!
         </a>
       </div>
     </div>
