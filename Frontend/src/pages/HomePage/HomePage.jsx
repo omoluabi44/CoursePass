@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Styles from "./HomePage.module.css";
-
+import { FaAndroid  } from "react-icons/fa";
 const HomePage = () => {
   const handleDashboardClick = () => {
     console.log('Dashboard button clicked');
@@ -20,18 +20,15 @@ const HomePage = () => {
       </Link>
 
       <div>
-        <h2 className={Styles.homepage_heading} >Download the mobile app(APK)!</h2>
-        <p style={{color: "blue"}}>
-          enjoy the full feature by download the apk
-        </p>
+     
         <a
           className="crypto-airdrop-btn"
           href="https://expo.dev/artifacts/eas/bbkDXvGtWrC1iuriVMhWbR.apk"  // Replace with your URL
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGift size={24} style={{marginRight: "8px"}} />
-          Join Now
+          <FaAndroid  size={24} style={{marginRight: "8px"}} />
+         Download Apk file
         </a>
       </div>
     </div>
