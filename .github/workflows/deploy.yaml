@@ -32,17 +32,19 @@ jobs:
             echo "Pulling latest image..."
             docker pull ${{ secrets.DOCKER_USERNAME }}/coursepass
 
-            echo "Checking for container(s) occupying port 5000..."
-            old_container=\$(docker ps -q --filter "publish=5000")
-            if [ -n "\$old_container" ]; then
-              echo "Stopping container(s) occupying port 5000..."
-              docker rm -f \$old_container
+            echo "Checking for containers using port 5000..."
+            PORT_CONTAINERS=\$(docker ps -q --filter "publish=5000")
+            if [ ! -z "\$PORT_CONTAINERS" ]; then
+              echo "Stopping containers on port 5000: \$PORT_CONTAINERS"
+              docker stop \$PORT_CONTAINERS
+              docker rm \$PORT_CONTAINERS
             else
-              echo "No container occupying port 5000."
+              echo "No containers occupying port 5000"
             fi
+
+            echo "Removing container named coursepass (if exists)..."
+            docker rm -f coursepass || true
 
             echo "Starting new container..."
             docker run -d --name coursepass -p 5000:80 ${{ secrets.DOCKER_USERNAME }}/coursepass
-
-            echo "Deployment complete!"
           EOF
