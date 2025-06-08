@@ -16,20 +16,31 @@ jobs:
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/coursepass ./Frontend
-
+        run: |
+          echo "Building Docker image with tag: ${{ secrets.DOCKER_USERNAME }}/coursepass"
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/coursepass ./Frontend
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/coursepass
+        run: |
+          echo "Pushing Docker image to Docker Hub: ${{ secrets.DOCKER_USERNAME }}/coursepass"
+          docker push ${{ secrets.DOCKER_USERNAME }}/coursepass
 
       - name: Setup SSH key
         run: |
+          echo "Setting up SSH key (not printing private key for security)"
           echo "${{ secrets.EC2_SSH_KEY }}" > private_key.pem
           chmod 600 private_key.pem
 
+      - name: Show deployment variables
+        run: |
+          echo "Deploying to EC2 host: ${{ secrets.EC2_HOST }}"
+          echo "Using EC2 user: ${{ secrets.EC2_USER }}"
+          echo "Docker image tag: ${{ secrets.DOCKER_USERNAME }}/coursepass"
+
       - name: SSH and deploy on EC2
         run: |
-          ssh -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
+          ssh -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << EOF
+            echo "Connected to remote host: \$(hostname)"
             docker pull ${{ secrets.DOCKER_USERNAME }}/coursepass
             docker rm -f coursepass || true
             docker run -d --name coursepass -p 5000:80 ${{ secrets.DOCKER_USERNAME }}/coursepass
