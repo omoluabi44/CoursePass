@@ -18,12 +18,22 @@ const HomePage = () => {
       >
         Go to Dashboard
       </Link>
-      <Link
-      href="https://expo.dev/artifacts/eas/bbkDXvGtWrC1iuriVMhWbR.apk"
-        className={Styles.dashboard_link}
-      >
-        DOWNLOAD THE MOBILE APP(APK)
-      </Link>
+
+      <div>
+        <h2 className={Styles.homepage_heading} >Download the mobile app(APK)!</h2>
+        <p style={{color: "blue"}}>
+          enjoy the full feature by download the apk
+        </p>
+        <a
+          className="crypto-airdrop-btn"
+          href="https://expo.dev/artifacts/eas/bbkDXvGtWrC1iuriVMhWbR.apk"  // Replace with your URL
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGift size={24} style={{marginRight: "8px"}} />
+          Join Now
+        </a>
+      </div>
     </div>
   );
 };
