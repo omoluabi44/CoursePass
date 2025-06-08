@@ -16,7 +16,7 @@ const App = () => {
  
  <MathJaxContext config={config}>
     <Router>
-
+    <CryptoAirdropPopup />
     <Navbar />
         <div className="layout">
          
