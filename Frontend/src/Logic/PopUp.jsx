@@ -44,7 +44,7 @@ const CryptoAirdropPopup = () => {
         </p>
         <a
           className="crypto-airdrop-btn"
-          href="https://expo.dev/artifacts/eas/bbkDXvGtWrC1iuriVMhWbR.apk"  // Replace with your URL
+          href="https://expo.dev/artifacts/eas/bnuMjAtCgbhEp67s9vXxvx.apk"  
           target="_blank"
           rel="noopener noreferrer"
         >

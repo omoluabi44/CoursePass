@@ -23,9 +23,10 @@ const HomePage = () => {
      
         <a
           className="crypto-airdrop-btn"
-          href="https://expo.dev/artifacts/eas/bbkDXvGtWrC1iuriVMhWbR.apk"  // Replace with your URL
+          href="https://expo.dev/artifacts/eas/bnuMjAtCgbhEp67s9vXxvx.apk"  // Replace with your URL
           target="_blank"
           rel="noopener noreferrer"
+          
         >
           <FaAndroid  size={24} style={{marginRight: "8px"}} />
          Download APK file
