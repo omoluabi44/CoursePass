@@ -1,14 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import heroImage from '../assets/images/student.png';
-import backgroundImage from '../assets/images/bg.jpg'; 
-import {Link} from 'react-router-dom';
+import backgroundImage from '../assets/images/bg.jpg';
 
 const HeroSection = () => {
+  let user = null;
+  try {
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      user = JSON.parse(storedUser);
+    }
+  } catch (e) {
+    console.error('Error parsing user from localStorage', e);
+  }
+
   return (
     <>
       <style>
         {`
-          /* Base styles */
           .hero-section {
             display: flex;
             flex-direction: row;
@@ -17,7 +26,7 @@ const HeroSection = () => {
             padding: 4rem 2rem;
             color: #333;
             background-color: white;
-            background-image: url(${backgroundImage}); /* Added background image */
+            background-image: url(${backgroundImage});
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -34,7 +43,7 @@ const HeroSection = () => {
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(255, 255, 255, 0.8); /* Increased opacity for readability */
+            background-color: rgba(255, 255, 255, 0.8);
             z-index: -1;
           }
 
@@ -93,6 +102,8 @@ const HeroSection = () => {
             transition: all 0.3s ease;
             white-space: nowrap;
             font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
           }
 
           .button-primary {
@@ -128,11 +139,10 @@ const HeroSection = () => {
             transform: translateY(-2px);
           }
 
-          /* Tablet screens (max-width: 1024px) */
           @media (max-width: 1024px) {
             .hero-section {
               padding: 3rem 1.5rem;
-              background-position: center; /* Ensure background stays centered */
+              background-position: center;
             }
             .hero-content {
               max-width: 500px;
@@ -142,14 +152,13 @@ const HeroSection = () => {
             }
           }
 
-          /* Mobile screens (max-width: 768px) */
           @media (max-width: 768px) {
             .hero-section {
               flex-direction: column;
               text-align: center;
               padding: 2rem 1.25rem;
               min-height: auto;
-              background-position: top center; /* Adjust for mobile */
+              background-position: top center;
             }
             .hero-content {
               max-width: 100%;
@@ -157,7 +166,7 @@ const HeroSection = () => {
             }
             .hero-image-container {
               max-width: 100%;
-              order: -1; /* Image appears above content */
+              order: -1;
               margin-bottom: 2rem;
             }
             .hero-img {
@@ -173,15 +182,14 @@ const HeroSection = () => {
               justify-content: center;
             }
             .hero-overlay {
-              background-color: rgba(255, 255, 255, 0.85); /* Slightly stronger overlay */
+              background-color: rgba(255, 255, 255, 0.85);
             }
           }
 
-          /* Small mobile screens (max-width: 480px) */
           @media (max-width: 480px) {
             .hero-section {
               padding: 1.5rem 1rem;
-              background-size: cover; /* Ensure background covers small screens */
+              background-size: cover;
             }
             .hero-title {
               font-size: 1.8rem;
@@ -200,7 +208,7 @@ const HeroSection = () => {
               max-height: 250px;
             }
             .hero-overlay {
-              background-color: rgba(255, 255, 255, 0.9); /* Stronger overlay for readability */
+              background-color: rgba(255, 255, 255, 0.9);
             }
           }
         `}
@@ -208,7 +216,6 @@ const HeroSection = () => {
 
       <section className="hero-section">
         <div className="hero-overlay"></div>
-       
 
         <div className="hero-content">
           <h1 className="hero-title">Ace Your Exams with Smarter Practice</h1>
@@ -217,10 +224,24 @@ const HeroSection = () => {
           </p>
 
           <div className="cta-buttons">
-            <button className="button button-primary">Get Started</button>
-            <button className="button button-secondary">Try Free</button>
-            
-            <button className="button button-outline">Download App</button>
+            {!user ? (
+              <>
+                <Link to="/signUp" className="button button-primary">Get Started</Link>
+                <Link to="/signUp" className="button button-secondary">Try Free</Link>
+              </>
+            ) : (
+              <>
+                <Link to="/CourseList" className="button button-primary">Go to Dashboard</Link>
+              </>
+            )}
+            <a
+              href="https://expo.dev/artifacts/eas/bnuMjAtCgbhEp67s9vXxvx.apk"
+              className="button button-outline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download App
+            </a>
           </div>
         </div>
 

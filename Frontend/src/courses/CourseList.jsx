@@ -211,7 +211,7 @@ const CourseList = () => {
           }
 
           .course-info {
-            background-color: "white";
+            background-color: var(--accent);
             border: 1px solid var(--accent);
             border-radius: var(--border-radius);
             padding: var(--spacing-sm);
@@ -224,7 +224,7 @@ const CourseList = () => {
           }
 
           .course-info p {
-            color: "black";
+            color: white;
             font-weight: bold;
             font-size: 1rem;
             margin: 0;
