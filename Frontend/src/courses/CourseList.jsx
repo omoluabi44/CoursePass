@@ -211,7 +211,7 @@ const CourseList = () => {
           }
 
           .course-info {
-            background-color: var(--secondary);
+            background-color: "white";
             border: 1px solid var(--accent);
             border-radius: var(--border-radius);
             padding: var(--spacing-sm);
@@ -219,14 +219,14 @@ const CourseList = () => {
             margin: var(--spacing-sm);
           }
           .course-list-container.dark .course-info {
-            background-color: var(--bg-dark);
+            background-color: "white";
             border-color: var(--text-dark);
           }
 
           .course-info p {
-            color: var(--accent);
+            color: "black";
             font-weight: bold;
-            font-size: 0.875rem;
+            font-size: 1rem;
             margin: 0;
             white-space: nowrap;
             overflow: hidden;
