@@ -1,0 +1,161 @@
+/* Hero Section Styles */
+.hero-section {
+  display: flex;
+  flex-direction: row; /* Default for larger screens */
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  color: #333; /* A dark color for text for contrast */
+
+  /* --- Background Image Properties --- */
+  background-image: url('../assets/images/bg.jpg'); /* Replace with your background image path */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-color: white; /* Fallback color if image fails to load, or to tint the image */
+  position: relative; /* Needed for overlay if you want to darken/lighten the image */
+  z-index: 1; /* Ensures content is above potential overlay */
+}
+
+/* Optional: Add an overlay for better text readability over the background image */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7); /* White overlay with 70% opacity */
+  z-index: -1; /* Puts the overlay behind the content but above the background image */
+}
+
+
+.hero-content {
+  flex: 1;
+  padding-right: 20px; /* Add some spacing between content and image */
+}
+
+.hero-content h1 {
+  font-size: 3em; /* Larger heading for impact */
+  margin-bottom: 15px;
+  line-height: 1.5em;
+  color: #007BFF; /* Primary blue for the heading */
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  line-height: 1.6; /* Sets the line height to 1.6 times the font size for readability */
+  margin-bottom: 30px;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Removes extra space below image */
+  margin: 0 auto; /* Center the image */
+}
+
+/* Call to Action Buttons */
+.cta-buttons {
+  margin-top: 20px;
+  display: flex; /* Arrange buttons in a row */
+  gap: 15px; /* Space between buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.btn {
+  padding: 12px 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Slightly rounded corners for buttons */
+  font-size: 1em;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007BFF;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.btn-secondary {
+  background-color: white; /* White button */
+  color: #007BFF; /* Blue text */
+  border: 1px solid #007BFF; /* Blue border */
+}
+
+.btn-secondary:hover {
+  background-color: #f0f0f0; /* Slight background change on hover */
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid #007BFF;
+  color: #007BFF;
+}
+
+.btn-outline:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* For screens smaller than 768px (e.g., tablets and mobile devices) */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column; /* Stack content and image vertically */
+    text-align: center;
+    padding: 30px; /* Adjust padding for smaller screens */
+  }
+
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 40px; /* Space between content and image when stacked */
+  }
+
+  .hero-content h1 {
+    font-size: 2.5em; /* Adjust heading size */
+  }
+
+  .hero-content p {
+    font-size: 1em;
+  }
+
+  .hero-image {
+    margin-top: 20px; /* Space between image and content when stacked */
+  }
+
+  .cta-buttons {
+    justify-content: center; /* Center buttons when stacked */
+  }
+}
+
+/* For screens smaller than 480px (e.g., mobile devices) */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2em;
+  }
+
+  .btn {
+    width: 100%; /* Make buttons full width on very small screens */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .cta-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Adjust gap for stacked buttons */
+  }
+}

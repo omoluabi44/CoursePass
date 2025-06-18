@@ -1,0 +1,137 @@
+/* Features Section Styles */
+.features-section {
+  padding: 50px 20px; /* Adjust horizontal padding */
+  text-align: center;
+  background-color: #f8f8f8; /* Light background for the section */
+}
+
+.features-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #007BFF; /* Primary blue for the heading */
+}
+
+/* Base grid for larger screens (default) */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+  gap: 25px; /* Space between cards */
+  max-width: 1200px; /* Max width to center content */
+  margin: 0 auto; /* Center the grid */
+}
+
+.feature-card {
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Slightly more prominent shadow */
+  border-radius: 10px; /* Rounded corners for cards */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content vertically in card */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.feature-card:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15); /* Enhance shadow on hover */
+}
+
+.feature-icon {
+  width: 60px; /* Desired display width */
+  height: 60px; /* Desired display height */
+  max-width: 100%; /* Ensures it scales down if 60px is too big for its parent */
+  object-fit: contain; /* Ensures the image scales down without cropping, maintaining aspect ratio */
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #007BFF; /* Blue color for feature titles */
+}
+
+.feature-card p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5; /* Good line height for readability */
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* For screens smaller than 992px (e.g., tablets in portrait or smaller laptops) */
+@media (max-width: 992px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    gap: 20px; /* Slightly smaller gap */
+  }
+
+  .features-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+}
+
+/* For screens smaller than 768px (e.g., smaller tablets and mobile devices) */
+@media (max-width: 768px) {
+  .features-section {
+    padding: 40px 0; /* Remove horizontal padding from section to allow cards to scroll to edges */
+  }
+
+  .features-section h2 {
+    padding: 0 20px; /* Add horizontal padding back for heading */
+    margin-bottom: 30px;
+    font-size: 2em;
+  }
+
+  .features-grid {
+    /* Transform into a horizontally scrollable flex container */
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: nowrap; /* Prevent wrapping onto multiple lines */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+    padding: 0 20px 20px; /* Add horizontal padding to the grid itself, and bottom padding for scrollbar space */
+    gap: 20px; /* Space between cards */
+    justify-content: flex-start; /* Align items to the start of the scroll container */
+    margin: 0; /* Remove auto margin from features-grid */
+    max-width: none; /* Allow grid to expand to accommodate scrollable items */
+  }
+
+  .features-grid::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+  }
+  .features-grid {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .feature-card {
+    /* Essential for fixed-width scrollable cards */
+    flex: 0 0 auto; /* Do not grow, do not shrink, base size is content */
+    width: 280px; /* Fixed width for each card */
+  }
+}
+
+/* For screens smaller than 480px (e.g., small mobile devices) */
+@media (max-width: 480px) {
+  .features-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    padding: 0 15px; /* Adjust padding for smaller screens */
+  }
+
+  .features-grid {
+    padding: 0 15px 15px; /* Adjust padding for smaller screens */
+    gap: 15px; /* Adjust gap for smaller screens */
+  }
+
+  .feature-card {
+    width: 250px; /* Slightly smaller width for very small screens */
+    padding: 25px; /* Adjust padding */
+  }
+
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
