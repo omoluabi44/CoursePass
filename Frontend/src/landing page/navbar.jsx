@@ -63,6 +63,7 @@ const Navbar = () => {
         ]
       : [
           { path: '/CourseList', label: 'Dashboard' },
+          { path: '/quiz', label: 'Past question' },
           { label: 'Logout', isLogout: true },
         ]),
   ];

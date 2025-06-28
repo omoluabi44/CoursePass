@@ -1,18 +1,16 @@
-import { useEffect, useRef } from 'react';
+// TestToast.js
+import React from 'react';
+import { useToast } from '../auth/popUp'; // adjust path
 
-const MathJaxRenderer = ({ latex }) => {
-  const containerRef = useRef(null);
+export default function TestToast() {
+  const { Toast, showToast } = useToast();
 
-  useEffect(() => {
-    if (typeof window.MathJax !== 'undefined') {
-      window.MathJax.typeset([containerRef.current]);
-    }
-  }, [latex]);
-
-  return <div ref={containerRef}>{latex}</div>;
-};
-
-// Usage
-const App = () => (
-  <MathJaxRenderer latex="\frac{d}{dx}f(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}" />
-);
+  return (
+    <div>
+      {Toast}
+      <button onClick={() => showToast('success', 'Success', 'It works!')}>
+        Show Toast
+      </button>
+    </div>
+  );
+}

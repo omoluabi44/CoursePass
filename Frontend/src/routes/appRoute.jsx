@@ -17,6 +17,9 @@ import CourseList from "../courses/CourseList";
 import CourseDetails from "../courses/CourseDetails";
 import CourseNote from "../courses/notes";
 import ForgetPassword from "../auth/forgetPassword";
+import DropdownComponent from "../pages/quiz/quiz";
+import Quiz from "../pages/quiz/quizdetail";
+import TestToast from "../pages/testing";
 
 const AppRoutes = () => {
     return (
@@ -37,6 +40,9 @@ const AppRoutes = () => {
         <Route path="/CourseList" element={<CourseList />}/>
         <Route path="/CourseDetails/:courseId" element={<CourseDetails />}/>
          <Route path="/notes/:selectedValue/:outline/:courseId/:topic" element={<CourseNote />}/>
+         <Route path="/quiz" element={<DropdownComponent />}/>
+         <Route path="/quizes/:course/:uni/:year" element={<Quiz />} />
+        <Route path="/testing" element={<TestToast />} />
 
       </Routes>
     );
