@@ -3,6 +3,10 @@ import {useParams, useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import ResultPage from './marksheet';
 import NotFound from './notfound';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css';
+import ReactMarkdown from 'react-markdown';
 
 
 export default function Quiz() {
@@ -162,7 +166,14 @@ export default function Quiz() {
                             margin: 0,
                         }}
                     >
-                        {questions[questionId]?.questionText || 'No question'}
+                         <ReactMarkdown
+                                  remarkPlugins={[remarkMath]}
+                                  rehypePlugins={[rehypeKatex]}
+                                >
+                                  {/* {note?.content || ''} */}
+                                      {questions[questionId]?.questionText || 'No question'}
+                                </ReactMarkdown>
+                    
                     </p>
 
                     <div
@@ -197,7 +208,16 @@ export default function Quiz() {
                                     cursor: 'pointer',
                                 }}
                             >
-                                {ans}
+                               
+
+                                  <ReactMarkdown
+                                  remarkPlugins={[remarkMath]}
+                                  rehypePlugins={[rehypeKatex]}
+                                >
+                                  {/* {note?.content || ''} */}
+                                      {ans}
+                                </ReactMarkdown>
+                    
                             </button>
                         ))}
                     </div>
